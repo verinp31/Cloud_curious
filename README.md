@@ -1,6 +1,15 @@
 # Cloud Curious
 A simple repo used to test pull requests
 
+## CRM Amon (SaaS RP) — livrables portage Twenty → Liferay DXP 2026
+
+Documentation de la brique CRM phase amont (acquisition), multi-tenant Account Restrictions :
+
+- [Index des livrables](docs/crm-amon/README.md)
+- [Spécification technico-fonctionnelle](docs/crm-amon/spec/01-specification-technico-fonctionnelle.md)
+- [Plan de migration (humain)](docs/crm-amon/migration/02-plan-migration-technologique.md)
+- [Plan de migration Cursor AI](docs/crm-amon/migration/03-plan-migration-cursor-ai.md)
+
 [![N|MITPE](https://innovation.mit.edu/assets/MIT.PE_identity_Vertical-300x89.png)](https://professionalprograms.mit.edu/es/)
 
 El mundo sería un mejor lugar si pudiéramos llevar este nivel de colaboración a todas partes.
