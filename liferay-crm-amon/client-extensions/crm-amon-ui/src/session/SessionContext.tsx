@@ -47,7 +47,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     },
     selectAccount: (id) => { localStorage.setItem('crm-amon-account', id); setAccountId(id); },
     clearAccount: () => { localStorage.removeItem('crm-amon-account'); setAccountId(null); },
-    setLocale: (l) => { localStorage.setItem('crm-amon-locale', l); setLocaleState(l); },
+    setLocale: (l) => { localStorage.setItem('crm-amon-locale', l); setLocaleState(l); document.documentElement.lang = l; setRev((x) => x + 1); },
     tr: (key) => t(locale, key),
     bump: () => setRev((x) => x + 1),
   };

@@ -85,7 +85,7 @@ function ShellLayout() {
               <option value="en">EN</option>
             </select>
             <button type="button" className="ghost" onClick={clearAccount}>{tr('account.switch')}</button>
-            <button type="button" className="ghost" onClick={logout}>Logout</button>
+            <button type="button" className="ghost" onClick={logout}>{tr('common.logout')}</button>
           </div>
         </header>
         <div className="page">
@@ -130,7 +130,7 @@ function HomePage() {
         <table>
           <thead>
             <tr>
-              <th>Name</th>
+              <th>{tr('common.name')}</th>
               <th>{tr('people.company')}</th>
               <th>{tr('opportunities.stage')}</th>
               <th>{tr('opportunities.amount')}</th>
@@ -271,7 +271,7 @@ function CompanyDetailPage() {
         <ul>{opps.map((o) => <li key={o.id}><Link to={`/opportunities/${o.id}`}>{o.name}</Link></li>)}</ul>
       </div>
       <div className="card">
-        <h2>Notes</h2>
+        <h2>{tr('notes.title')}</h2>
         {notes.map((n) => <div key={n.id}><strong>{n.title}</strong><div className="muted">{n.body}</div></div>)}
         <button
           type="button"
@@ -478,7 +478,7 @@ function OpportunitiesPage() {
           <table>
             <thead>
               <tr>
-                <th>Name</th>
+                <th>{tr('common.name')}</th>
                 <th>{tr('people.company')}</th>
                 <th>{tr('opportunities.stage')}</th>
                 <th>{tr('opportunities.amount')}</th>
@@ -569,7 +569,7 @@ function OpportunityDetailPage() {
         </select>
       </div>
       <div className="card">
-        <h2>Notes</h2>
+        <h2>{tr('notes.title')}</h2>
         {notes.map((n) => <div key={n.id}><strong>{n.title}</strong><div className="muted">{n.body}</div></div>)}
         <button
           type="button"
@@ -625,7 +625,7 @@ function TasksPage() {
         <table>
           <thead>
             <tr>
-              <th>Title</th>
+              <th>{tr('common.name')}</th>
               <th>{tr('tasks.status')}</th>
               <th>{tr('tasks.due')}</th>
             </tr>
@@ -671,7 +671,7 @@ function AdminPage() {
     <div>
       <h1>{tr('admin.title')}</h1>
       <div className="card">
-        <h2>Account</h2>
+        <h2>{tr('admin.account')}</h2>
         <p>{account.name} — {account.accountType === 'AGENCY' ? tr('account.agency') : tr('account.freelance')}</p>
         <p>{account.defaultLanguage} / {account.defaultCurrency}</p>
       </div>
@@ -706,7 +706,7 @@ function AdminPage() {
       <div className="card">
         <h2>{tr('admin.users')}</h2>
         <table>
-          <thead><tr><th>Name</th><th>Email</th><th>Role</th></tr></thead>
+          <thead><tr><th>{tr('admin.colName')}</th><th>{tr('admin.colEmail')}</th><th>{tr('admin.colRole')}</th></tr></thead>
           <tbody>
             {users.map((u) => <tr key={u.id}><td>{u.name}</td><td>{u.email}</td><td>{u.role}</td></tr>)}
           </tbody>
