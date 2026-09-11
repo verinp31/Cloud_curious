@@ -37,3 +37,12 @@ Cœur CRM acquisition uniquement :
 - Code : https://github.com/twentyhq/twenty
 - Docs : https://docs.twenty.com
 - Objets standards Twenty : People, Companies, Opportunities, Tasks, Notes
+
+
+## Statut implémentation (2026-09-11)
+
+Workspace code : [`liferay-crm-amon/`](../../liferay-crm-amon/README.md)
+
+- SPA React mocks multi-tenant : **opérationnelle** (`npm run build` OK)
+- Configs Objects / Account Roles / i18n plateforme : présentes
+- Import DXP réel : à faire sur instance Liferay (hors de ce repo de test)

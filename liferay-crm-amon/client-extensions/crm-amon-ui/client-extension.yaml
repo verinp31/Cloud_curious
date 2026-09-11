@@ -1,0 +1,9 @@
+crm-amon-ui:
+  name: CRM Amon UI
+  type: customElement
+  friendlyURLMapping: crm-amon-ui
+  htmlElementName: crm-amon-ui
+  urls:
+    - index.js
+  cssURLs:
+    - index.css
