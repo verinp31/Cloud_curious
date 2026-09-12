@@ -16,8 +16,9 @@ function LoginPage() {
   const { login, tr } = useSession();
   return (
     <div className="center-screen">
-      <div className="card narrow">
-        <h1>{tr('login.title')}</h1>
+      <div className="login-card">
+        <div className="e002-kicker">SaaS RP</div>
+        <h1 className="display">{tr('login.title')}</h1>
         <p className="muted">{tr('login.hint')}</p>
         <button type="button" onClick={login}>{tr('login.submit')}</button>
       </div>
@@ -30,20 +31,33 @@ function AccountSelectPage() {
   const accounts = crmApi.listAccounts();
   return (
     <div className="center-screen">
-      <div className="card narrow">
-        <h1>{tr('account.title')}</h1>
-        <div className="stack">
-          {accounts.map((a) => (
-            <div className="row-card" key={a.id}>
-              <div>
+      {/* Canvas E-002 — sélecteur d'Account */}
+      <div className="e002">
+        <div className="e002-kicker">CRM Amon · SaaS RP</div>
+        <h1 className="display">{tr('account.title')}</h1>
+        <p className="muted">{tr('account.subtitle')}</p>
+        <div className="e002-grid">
+          {accounts.map((a) => {
+            const officeCount = crmApi.listOffices(a.id).length;
+            return (
+              <div className="e002-card" key={a.id}>
                 <strong>{a.name}</strong>
-                <div className="muted">
-                  {a.accountType === 'AGENCY' ? tr('account.agency') : tr('account.freelance')}
+                <div className="e002-meta">
+                  <span className="pill">
+                    {a.accountType === 'AGENCY' ? tr('account.agency') : tr('account.freelance')}
+                  </span>
+                  {a.accountType === 'AGENCY' && (
+                    <span className="pill neutral">
+                      {officeCount} {tr('account.offices')}
+                    </span>
+                  )}
                 </div>
+                <button type="button" onClick={() => selectAccount(a.id)}>
+                  {tr('account.enter')}
+                </button>
               </div>
-              <button type="button" onClick={() => selectAccount(a.id)}>{tr('account.enter')}</button>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
@@ -52,57 +66,67 @@ function AccountSelectPage() {
 
 function ShellLayout() {
   const { account, tr, locale, setLocale, clearAccount, logout } = useSession();
-  const links = [
+  const primaryLinks = [
     ['/', 'nav.home'],
     ['/companies', 'nav.companies'],
     ['/people', 'nav.people'],
     ['/opportunities', 'nav.opportunities'],
     ['/tasks', 'nav.tasks'],
+  ] as const;
+  const secondaryLinks = [
     ['/admin', 'nav.admin'],
     ['/preferences', 'nav.preferences'],
   ] as const;
   return (
+    /* Canvas E-003 — Shell applicatif */
     <div className="shell">
-      <aside>
-        <div className="brand">{tr('shell.brand')}</div>
-        <nav>
-          {links.map(([to, key]) => (
-            <NavLink key={to} to={to} end={to === '/'}>{tr(key)}</NavLink>
-          ))}
-        </nav>
-      </aside>
-      <section>
-        <header className="top">
-          <div>
-            <strong>{account?.name}</strong>
-            <div className="muted">
-              {account?.accountType === 'AGENCY' ? tr('account.agency') : tr('account.freelance')}
-            </div>
-          </div>
-          <div className="actions">
-            <select value={locale} onChange={(e) => setLocale(e.target.value as 'fr' | 'en')}>
-              <option value="fr">FR</option>
-              <option value="en">EN</option>
-            </select>
-            <button type="button" className="ghost" onClick={clearAccount}>{tr('account.switch')}</button>
-            <button type="button" className="ghost" onClick={logout}>{tr('common.logout')}</button>
-          </div>
-        </header>
-        <div className="page">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/companies" element={<CompaniesPage />} />
-            <Route path="/companies/:id" element={<CompanyDetailPage />} />
-            <Route path="/people" element={<PeoplePage />} />
-            <Route path="/people/:id" element={<PersonDetailPage />} />
-            <Route path="/opportunities" element={<OpportunitiesPage />} />
-            <Route path="/opportunities/:id" element={<OpportunityDetailPage />} />
-            <Route path="/tasks" element={<TasksPage />} />
-            <Route path="/admin" element={<AdminPage />} />
-            <Route path="/preferences" element={<PreferencesPage />} />
-          </Routes>
+      <header className="topbar">
+        <div className="topbar-brand">
+          <span className="product">SaaS RP</span>
+          <span className="sep">|</span>
+          <span className="app-name">{tr('shell.brand')}</span>
         </div>
-      </section>
+        <div className="topbar-actions">
+          <span className="muted" style={{ color: '#b7d4c8' }}>
+            Account: <strong style={{ color: '#fff' }}>{account?.name}</strong>
+          </span>
+          <select value={locale} onChange={(e) => setLocale(e.target.value as 'fr' | 'en')} aria-label={tr('preferences.locale')}>
+            <option value="fr">FR</option>
+            <option value="en">EN</option>
+          </select>
+          <button type="button" className="ghost" onClick={clearAccount}>{tr('account.switch')}</button>
+          <button type="button" className="ghost" onClick={logout}>{tr('common.logout')}</button>
+        </div>
+      </header>
+      <div className="shell-body">
+        <aside className="sidebar">
+          <nav>
+            {primaryLinks.map(([to, key]) => (
+              <NavLink key={to} to={to} end={to === '/'}>{tr(key)}</NavLink>
+            ))}
+            <div className="nav-divider" />
+            {secondaryLinks.map(([to, key]) => (
+              <NavLink key={to} to={to}>{tr(key)}</NavLink>
+            ))}
+          </nav>
+        </aside>
+        <div className="workspace">
+          <div className="page">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/companies" element={<CompaniesPage />} />
+              <Route path="/companies/:id" element={<CompanyDetailPage />} />
+              <Route path="/people" element={<PeoplePage />} />
+              <Route path="/people/:id" element={<PersonDetailPage />} />
+              <Route path="/opportunities" element={<OpportunitiesPage />} />
+              <Route path="/opportunities/:id" element={<OpportunityDetailPage />} />
+              <Route path="/tasks" element={<TasksPage />} />
+              <Route path="/admin" element={<AdminPage />} />
+              <Route path="/preferences" element={<PreferencesPage />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
