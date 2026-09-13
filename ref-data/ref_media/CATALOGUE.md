@@ -1,165 +1,260 @@
-# Catalogue médias — `ref_media`
+# Catalogue médias — `ref_media` (étendu)
 
-Liste opérationnelle pour relations presse. Les lignes **France** (`source_liste = EXEMPLE`) calent le format de la table. Les pays demandés sont en `source_liste = CIBLE`.
+Catégories alignées sur la base France : **Web / Print / TV / Radio**, puis **Nationale / Régionale**.
 
-Priorité RP : **1** incontournable · **2** important · **3** complémentaire.
+**4638 médias** au total.
 
-## France (10 médias — exemple de structure)
+## Volumes
 
-| id | Nom | Type | Thématique | Langue | Groupe | Priorité | URL |
-|---|---|---|---|---|---|---|---|
-| MED-FR-001 | Le Monde | Presse quotidienne | Généraliste | fr | Groupe Le Monde | 1 | https://www.lemonde.fr |
-| MED-FR-002 | Le Figaro | Presse quotidienne | Généraliste | fr | Groupe Figaro | 1 | https://www.lefigaro.fr |
-| MED-FR-003 | Les Echos | Presse quotidienne | Économie | fr | Groupe Les Echos / LVMH | 1 | https://www.lesechos.fr |
-| MED-FR-004 | Agence France-Presse | Agence de presse | Généraliste | fr | AFP | 1 | https://www.afp.com |
-| MED-FR-005 | France Inter | Radio | Généraliste | fr | Radio France | 1 | https://www.radiofrance.fr/franceinter |
-| MED-FR-006 | TF1 | Télévision | Généraliste | fr | Groupe TF1 | 1 | https://www.tf1.fr |
-| MED-FR-007 | France 2 | Télévision | Généraliste | fr | France Télévisions | 1 | https://www.france.tv/france-2 |
-| MED-FR-008 | BFMTV | Télévision | Généraliste | fr | Altice Media | 1 | https://www.bfmtv.com |
-| MED-FR-009 | Mediapart | Web natif | Généraliste | fr | Société éditrice de Mediapart | 2 | https://www.mediapart.fr |
-| MED-FR-010 | L'Express | Presse magazine | Généraliste | fr | Groupe L'Express | 2 | https://www.lexpress.fr |
+| Pays | Web | Print | TV | Radio | Nationale | Régionale | Total |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| France | 2 | 4 | 3 | 1 | 10 | 0 | 10 |
+| Belgique | 11 | 302 | 95 | 121 | 343 | 186 | 529 |
+| Suisse | 173 | 255 | 105 | 64 | 316 | 281 | 597 |
+| Portugal | 685 | 1094 | 157 | 509 | 1161 | 1284 | 2445 |
+| Espagne | 9 | 691 | 188 | 169 | 227 | 830 | 1057 |
 
-## Belgique (32 médias — liste cible)
+## Titres prioritaires (seed RP)
 
-| id | Nom | Type | Thématique | Langue | Groupe | Priorité | URL |
-|---|---|---|---|---|---|---|---|
-| MED-BE-001 | Le Soir | Presse quotidienne | Généraliste | fr | Groupe Rossel | 1 | https://www.lesoir.be |
-| MED-BE-002 | La Libre Belgique | Presse quotidienne | Généraliste | fr | IPM Group | 1 | https://www.lalibre.be |
-| MED-BE-003 | La DH / La Dernière Heure | Presse quotidienne | Généraliste | fr | IPM Group | 2 | https://www.dhnet.be |
-| MED-BE-004 | L'Avenir | Presse quotidienne | Régional | fr | IPM Group | 2 | https://www.lavenir.net |
-| MED-BE-005 | Sudinfo | Presse quotidienne | Régional | fr | Groupe Rossel | 2 | https://www.sudinfo.be |
-| MED-BE-006 | Het Laatste Nieuws | Presse quotidienne | Généraliste | nl | DPG Media | 1 | https://www.hln.be |
-| MED-BE-007 | Het Nieuwsblad | Presse quotidienne | Généraliste | nl | Mediahuis | 1 | https://www.nieuwsblad.be |
-| MED-BE-008 | De Standaard | Presse quotidienne | Généraliste | nl | Mediahuis | 1 | https://www.standaard.be |
-| MED-BE-009 | De Morgen | Presse quotidienne | Généraliste | nl | DPG Media | 1 | https://www.demorgen.be |
-| MED-BE-010 | Gazet van Antwerpen | Presse quotidienne | Régional | nl | Mediahuis | 2 | https://www.gva.be |
-| MED-BE-011 | Het Belang van Limburg | Presse quotidienne | Régional | nl | Mediahuis | 2 | https://www.hbvl.be |
-| MED-BE-012 | L'Echo | Presse quotidienne | Économie | fr | Mediafin (Rossel / Roularta) | 1 | https://www.lecho.be |
-| MED-BE-013 | De Tijd | Presse quotidienne | Économie | nl | Mediafin (Rossel / Roularta) | 1 | https://www.tijd.be |
-| MED-BE-014 | Le Vif | Presse magazine | Généraliste | fr | Roularta Media Group | 2 | https://www.levif.be |
-| MED-BE-015 | Knack | Presse magazine | Généraliste | nl | Roularta Media Group | 2 | https://www.knack.be |
-| MED-BE-016 | Trends / Trends-Tendances | Presse magazine | Économie | nl | Roularta Media Group | 2 | https://www.trends.be |
-| MED-BE-017 | RTBF / La Une | Télévision | Généraliste | fr | RTBF | 1 | https://www.rtbf.be |
-| MED-BE-018 | RTL-TVI | Télévision | Généraliste | fr | RTL Belgium | 1 | https://www.rtl.be |
-| MED-BE-019 | LN24 | Télévision | Généraliste | fr | IPM Group | 2 | https://www.ln24.be |
-| MED-BE-020 | VRT NWS | Télévision | Généraliste | nl | VRT | 1 | https://www.vrt.be/vrtnws |
-| MED-BE-021 | VTM | Télévision | Généraliste | nl | DPG Media | 1 | https://www.vtm.be |
-| MED-BE-022 | La Première | Radio | Généraliste | fr | RTBF | 2 | https://www.rtbf.be/lapremiere |
-| MED-BE-023 | Bel RTL | Radio | Généraliste | fr | RTL Belgium | 2 | https://www.belrtl.be |
-| MED-BE-024 | Radio Contact | Radio | Généraliste | fr | RTL Belgium | 3 | https://www.radiocontact.be |
-| MED-BE-025 | Radio 1 | Radio | Généraliste | nl | VRT | 2 | https://www.radio1.be |
-| MED-BE-026 | Qmusic | Radio | Généraliste | nl | DPG Media | 3 | https://qmusic.be |
-| MED-BE-027 | Belga | Agence de presse | Généraliste | fr | Belga News Agency | 1 | https://www.belganewsagency.eu/ |
-| MED-BE-028 | BRUZZ | Web natif | Régional | nl | Vlaams-Brusselse Media | 2 | https://www.bruzz.be |
-| MED-BE-029 | GrenzEcho | Presse quotidienne | Régional | de | Grenz-Echo / Groupe Rossel | 3 | https://www.grenzecho.net |
-| MED-BE-030 | 7sur7 | Web natif | Généraliste | fr | DPG Media | 2 | https://www.7sur7.be |
-| MED-BE-031 | Metro Belgique | Presse quotidienne | Généraliste | fr | Groupe Rossel | 3 | https://www.metrotime.be |
-| MED-BE-032 | Apache | Web natif | Généraliste | nl | Apache | 3 | https://www.apache.be |
+- **7sur7** (Belgique, Web, Nationale) — https://www.7sur7.be
+- **Apache** (Belgique, Web, Nationale) — https://www.apache.be
+- **Bel RTL** (Belgique, Radio, Nationale) — https://www.belrtl.be
+- **Belga** (Belgique, Web, Nationale) — https://www.belganewsagency.eu/
+- **BRUZZ** (Belgique, Web, Régionale) — https://www.bruzz.be
+- **De Morgen** (Belgique, Print, Nationale) — https://www.demorgen.be
+- **De Standaard** (Belgique, Print, Nationale) — https://www.standaard.be
+- **De Tijd** (Belgique, Print, Nationale) — https://www.tijd.be
+- **Gazet van Antwerpen** (Belgique, Print, Régionale) — https://www.gva.be
+- **GrenzEcho** (Belgique, Print, Régionale) — https://www.grenzecho.net
+- **Het Belang van Limburg** (Belgique, Print, Régionale) — https://www.hbvl.be
+- **Het Laatste Nieuws** (Belgique, Print, Nationale) — https://www.hln.be
+- **Het Nieuwsblad** (Belgique, Print, Nationale) — https://www.nieuwsblad.be
+- **Knack** (Belgique, Print, Nationale) — https://www.knack.be
+- **L'Avenir** (Belgique, Print, Régionale) — https://www.lavenir.net
+- **L'Echo** (Belgique, Print, Nationale) — https://www.lecho.be
+- **La DH / La Dernière Heure** (Belgique, Print, Nationale) — https://www.dhnet.be
+- **La Libre Belgique** (Belgique, Print, Nationale) — https://www.lalibre.be
+- **La Première** (Belgique, Radio, Nationale) — https://www.rtbf.be/lapremiere
+- **Le Soir** (Belgique, Print, Nationale) — https://www.lesoir.be
+- **Le Vif** (Belgique, Print, Nationale) — https://www.levif.be
+- **LN24** (Belgique, TV, Nationale) — https://www.ln24.be
+- **Metro Belgique** (Belgique, Print, Nationale) — https://www.metrotime.be
+- **Qmusic** (Belgique, Radio, Nationale) — https://qmusic.be
+- **Radio 1** (Belgique, Radio, Nationale) — https://www.radio1.be
+- **Radio Contact** (Belgique, Radio, Nationale) — https://www.radiocontact.be
+- **RTBF / La Une** (Belgique, TV, Nationale) — https://www.rtbf.be
+- **RTL-TVI** (Belgique, TV, Nationale) — https://www.rtl.be
+- **Sudinfo** (Belgique, Print, Régionale) — https://www.sudinfo.be
+- **Trends / Trends-Tendances** (Belgique, Print, Nationale) — https://www.trends.be
+- **VRT NWS** (Belgique, TV, Nationale) — https://www.vrt.be/vrtnws
+- **VTM** (Belgique, TV, Nationale) — https://www.vtm.be
+- **20 Minuten** (Suisse, Print, Nationale) — https://www.20min.ch
+- **20 minutes** (Suisse, Print, Nationale) — https://www.20min.ch/fr
+- **24 heures** (Suisse, Print, Régionale) — https://www.24heures.ch
+- **AWP Finanznachrichten** (Suisse, Web, Nationale) — https://www.awp.ch
+- **Basler Zeitung** (Suisse, Print, Régionale) — https://www.bazonline.ch
+- **Beobachter** (Suisse, Print, Nationale) — https://www.beobachter.ch
+- **Bilan** (Suisse, Print, Nationale) — https://www.bilan.ch
+- **Bilanz** (Suisse, Print, Nationale) — https://www.bilanz.ch
+- **Blick** (Suisse, Print, Nationale) — https://www.blick.ch
+- **Corriere del Ticino** (Suisse, Print, Régionale) — https://www.cdt.ch
+- **Der Bund** (Suisse, Print, Régionale) — https://www.derbund.ch
+- **Die Weltwoche** (Suisse, Print, Nationale) — https://www.weltwoche.ch
+- **Finanz und Wirtschaft** (Suisse, Print, Nationale) — https://www.fuw.ch
+- **Handelszeitung** (Suisse, Print, Nationale) — https://www.handelszeitung.ch
+- **Keystone-ATS** (Suisse, Web, Nationale) — https://www.keystone-sda.ch
+- **L'Agefi** (Suisse, Print, Nationale) — https://www.agefi.com
+- **L'Illustré** (Suisse, Print, Nationale) — https://www.illustre.ch
+- **La Liberté** (Suisse, Print, Régionale) — https://www.laliberte.ch
+- **Le Matin / lematin.ch** (Suisse, Web, Nationale) — https://www.lematin.ch
+- **Le Temps** (Suisse, Print, Nationale) — https://www.letemps.ch
+- **Neue Zürcher Zeitung** (Suisse, Print, Nationale) — https://www.nzz.ch
+- **RSI** (Suisse, TV, Régionale) — https://www.rsi.ch
+- **RTR** (Suisse, Radio, Régionale) — https://www.rtr.ch
+- **RTS** (Suisse, TV, Nationale) — https://www.rts.ch
+- **RTS La 1ère** (Suisse, Radio, Nationale) — https://www.rts.ch/rts-premiere/
+- **SRF** (Suisse, TV, Nationale) — https://www.srf.ch
+- **SWI swissinfo.ch** (Suisse, Web, Nationale) — https://www.swissinfo.ch
+- **Tages-Anzeiger** (Suisse, Print, Nationale) — https://www.tagesanzeiger.ch
+- **Tribune de Genève** (Suisse, Print, Régionale) — https://www.tdg.ch
+- **watson** (Suisse, Web, Nationale) — https://www.watson.ch
+- **20 Minutos** (Espagne, Print, Nationale) — https://www.20minutos.es
+- **ABC** (Espagne, Print, Nationale) — https://www.abc.es
+- **Antena 3** (Espagne, TV, Nationale) — https://www.antena3.com
+- **Ara** (Espagne, Print, Régionale) — https://www.ara.cat
+- **AS** (Espagne, Print, Nationale) — https://as.com
+- **Cadena SER** (Espagne, Radio, Nationale) — https://cadenaser.com
+- **Cinco Días** (Espagne, Print, Nationale) — https://cincodias.elpais.com
+- **COPE** (Espagne, Radio, Nationale) — https://www.cope.es
+- **EFE** (Espagne, Web, Nationale) — https://www.efe.com
+- **El Confidencial** (Espagne, Web, Nationale) — https://www.elconfidencial.com
+- **El Correo** (Espagne, Print, Régionale) — https://www.elcorreo.com
+- **El Diario Vasco** (Espagne, Print, Régionale) — https://www.diariovasco.com
+- **El Economista** (Espagne, Print, Nationale) — https://www.eleconomista.es
+- **El Español** (Espagne, Web, Nationale) — https://www.elespanol.com
+- **El Mundo** (Espagne, Print, Nationale) — https://www.elmundo.es
+- **El País** (Espagne, Print, Nationale) — https://elpais.com
+- **El Periódico** (Espagne, Print, Nationale) — https://www.elperiodico.com
+- **elDiario.es** (Espagne, Web, Nationale) — https://www.eldiario.es
+- **Europa Press** (Espagne, Web, Nationale) — https://www.europapress.es
+- **Expansión** (Espagne, Print, Nationale) — https://www.expansion.com
+- **La Nueva España** (Espagne, Print, Régionale) — https://www.lne.es
+- **La Razón** (Espagne, Print, Nationale) — https://www.larazon.es
+- **La Sexta** (Espagne, TV, Nationale) — https://www.lasexta.com
+- **La Vanguardia** (Espagne, Print, Nationale) — https://www.lavanguardia.com
+- **La Voz de Galicia** (Espagne, Print, Régionale) — https://www.lavozdegalicia.es
+- **Marca** (Espagne, Print, Nationale) — https://www.marca.com
+- **OKDiario** (Espagne, Web, Nationale) — https://okdiario.com
+- **Onda Cero** (Espagne, Radio, Nationale) — https://www.ondacero.es
+- **RAC1** (Espagne, Radio, Régionale) — https://www.rac1.cat
+- **RNE** (Espagne, Radio, Nationale) — https://www.rtve.es/radio
+- **RTVE.es** (Espagne, Web, Nationale) — https://www.rtve.es
+- **Telecinco** (Espagne, TV, Nationale) — https://www.telecinco.es
+- **TV3** (Espagne, TV, Régionale) — https://www.ccma.cat/tv3
+- **TVE La 1** (Espagne, TV, Nationale) — https://www.rtve.es/play/la-1/
+- **VilaWeb** (Espagne, Web, Régionale) — https://www.vilaweb.cat
+- **Antena 1** (Portugal, Radio, Nationale) — https://www.rtp.pt/antena1
+- **CMTV** (Portugal, TV, Nationale) — https://www.cmjornal.pt/cmtv
+- **CNN Portugal** (Portugal, TV, Nationale) — https://cnnportugal.iol.pt
+- **Correio da Manhã** (Portugal, Print, Nationale) — https://www.cmjornal.pt
+- **Diário de Notícias** (Portugal, Print, Nationale) — https://www.dn.pt
+- **ECO** (Portugal, Web, Nationale) — https://eco.sapo.pt
+- **Exame** (Portugal, Print, Nationale) — https://visao.pt/exame
+- **Expresso** (Portugal, Print, Nationale) — https://expresso.pt
+- **Jornal de Negócios** (Portugal, Print, Nationale) — https://www.jornaldenegocios.pt
+- **Jornal de Notícias** (Portugal, Print, Nationale) — https://www.jn.pt
+- **Jornal Económico** (Portugal, Print, Nationale) — https://jornaleconomico.sapo.pt
+- **Lusa** (Portugal, Web, Nationale) — https://www.lusa.pt
+- **Notícias ao Minuto** (Portugal, Web, Nationale) — https://www.noticiasaominuto.com
+- **Observador** (Portugal, Web, Nationale) — https://observador.pt
+- **Público** (Portugal, Print, Nationale) — https://www.publico.pt
+- **Record** (Portugal, Print, Nationale) — https://www.record.pt
+- **RFM** (Portugal, Radio, Nationale) — https://rfm.pt
+- **RTP Notícias** (Portugal, TV, Nationale) — https://www.rtp.pt/noticias
+- **RTP1** (Portugal, TV, Nationale) — https://www.rtp.pt
+- **Rádio Observador** (Portugal, Radio, Nationale) — https://observador.pt/radio
+- **Rádio Renascença** (Portugal, Radio, Nationale) — https://rr.pt
+- **SAPO** (Portugal, Web, Nationale) — https://www.sapo.pt
+- **SIC** (Portugal, TV, Nationale) — https://sic.pt
+- **SIC Notícias** (Portugal, TV, Nationale) — https://sicnoticias.pt
+- **Sábado** (Portugal, Print, Nationale) — https://www.sabado.pt
+- **TSF** (Portugal, Radio, Nationale) — https://www.tsf.pt
+- **TVI** (Portugal, TV, Nationale) — https://tvi.iol.pt
+- **Visão** (Portugal, Print, Nationale) — https://visao.pt
 
-## Suisse (30 médias — liste cible)
+## Détail par pays × type × couverture
 
-| id | Nom | Type | Thématique | Langue | Groupe | Priorité | URL |
-|---|---|---|---|---|---|---|---|
-| MED-CH-001 | Neue Zürcher Zeitung | Presse quotidienne | Généraliste | de | NZZ Mediengruppe | 1 | https://www.nzz.ch |
-| MED-CH-002 | Tages-Anzeiger | Presse quotidienne | Généraliste | de | TX Group | 1 | https://www.tagesanzeiger.ch |
-| MED-CH-003 | Blick | Presse quotidienne | Généraliste | de | Ringier | 1 | https://www.blick.ch |
-| MED-CH-004 | 20 Minuten | Presse quotidienne | Généraliste | de | TX Group | 1 | https://www.20min.ch |
-| MED-CH-005 | Der Bund | Presse quotidienne | Régional | de | TX Group | 2 | https://www.derbund.ch |
-| MED-CH-006 | Basler Zeitung | Presse quotidienne | Régional | de | TX Group | 2 | https://www.bazonline.ch |
-| MED-CH-007 | Le Temps | Presse quotidienne | Généraliste | fr | Fondation Aventinus | 1 | https://www.letemps.ch |
-| MED-CH-008 | 24 heures | Presse quotidienne | Régional | fr | TX Group | 1 | https://www.24heures.ch |
-| MED-CH-009 | Tribune de Genève | Presse quotidienne | Régional | fr | TX Group | 1 | https://www.tdg.ch |
-| MED-CH-010 | 20 minutes | Presse quotidienne | Généraliste | fr | TX Group | 1 | https://www.20min.ch/fr |
-| MED-CH-011 | Le Matin / lematin.ch | Web natif | Généraliste | fr | TX Group | 2 | https://www.lematin.ch |
-| MED-CH-012 | La Liberté | Presse quotidienne | Régional | fr | Groupe Saint-Paul | 2 | https://www.laliberte.ch |
-| MED-CH-013 | Corriere del Ticino | Presse quotidienne | Généraliste | it | Fondazione Corriere del Ticino | 1 | https://www.cdt.ch |
-| MED-CH-014 | Handelszeitung | Presse magazine | Économie | de | Ringier | 2 | https://www.handelszeitung.ch |
-| MED-CH-015 | Bilanz | Presse magazine | Économie | de | Ringier | 2 | https://www.bilanz.ch |
-| MED-CH-016 | Bilan | Presse magazine | Économie | fr | Ringier | 2 | https://www.bilan.ch |
-| MED-CH-017 | L'Agefi | Presse quotidienne | Économie | fr | Agefi SA | 1 | https://www.agefi.com |
-| MED-CH-018 | Finanz und Wirtschaft | Presse quotidienne | Économie | de | NZZ Mediengruppe | 2 | https://www.fuw.ch |
-| MED-CH-019 | SRF | Télévision | Généraliste | de | SRG SSR | 1 | https://www.srf.ch |
-| MED-CH-020 | RTS | Télévision | Généraliste | fr | SRG SSR | 1 | https://www.rts.ch |
-| MED-CH-021 | RSI | Télévision | Généraliste | it | SRG SSR | 1 | https://www.rsi.ch |
-| MED-CH-022 | RTS La 1ère | Radio | Généraliste | fr | SRG SSR | 2 | https://www.rts.ch/rts-premiere/ |
-| MED-CH-023 | SWI swissinfo.ch | Web natif | Généraliste | fr | SRG SSR | 1 | https://www.swissinfo.ch |
-| MED-CH-024 | Keystone-ATS | Agence de presse | Généraliste | fr | Keystone-SDA-ATS | 1 | https://www.keystone-sda.ch |
-| MED-CH-025 | AWP Finanznachrichten | Agence de presse | Économie | de | AWP | 1 | https://www.awp.ch |
-| MED-CH-026 | watson | Web natif | Généraliste | de | CH Media | 2 | https://www.watson.ch |
-| MED-CH-027 | Die Weltwoche | Presse magazine | Généraliste | de | Weltwoche Verlags AG | 3 | https://www.weltwoche.ch |
-| MED-CH-028 | Beobachter | Presse magazine | Généraliste | de | Ringier | 3 | https://www.beobachter.ch |
-| MED-CH-029 | L'Illustré | Presse magazine | People | fr | Ringier | 3 | https://www.illustre.ch |
-| MED-CH-030 | RTR | Radio | Généraliste | rm | SRG SSR | 3 | https://www.rtr.ch |
+### France
 
-## Portugal (28 médias — liste cible)
+**Print · Nationale** — 4 titres
+L'Express, Le Figaro, Le Monde, Les Echos
 
-| id | Nom | Type | Thématique | Langue | Groupe | Priorité | URL |
-|---|---|---|---|---|---|---|---|
-| MED-PT-001 | Público | Presse quotidienne | Généraliste | pt | Sonaecom | 1 | https://www.publico.pt |
-| MED-PT-002 | Expresso | Presse magazine | Généraliste | pt | Impresa (MFE actionnaire 2026) | 1 | https://expresso.pt |
-| MED-PT-003 | Jornal de Notícias | Presse quotidienne | Généraliste | pt | Notícias Ilimitadas | 1 | https://www.jn.pt |
-| MED-PT-004 | Diário de Notícias | Presse quotidienne | Généraliste | pt | Global Media Group | 2 | https://www.dn.pt |
-| MED-PT-005 | Correio da Manhã | Presse quotidienne | Généraliste | pt | Medialivre | 1 | https://www.cmjornal.pt |
-| MED-PT-006 | Observador | Web natif | Généraliste | pt | Observador On Time | 1 | https://observador.pt |
-| MED-PT-007 | Jornal de Negócios | Presse quotidienne | Économie | pt | Medialivre | 1 | https://www.jornaldenegocios.pt |
-| MED-PT-008 | ECO | Web natif | Économie | pt | Swipe News | 1 | https://eco.sapo.pt |
-| MED-PT-009 | Visão | Presse magazine | Généraliste | pt | Trust in News | 2 | https://visao.pt |
-| MED-PT-010 | Sábado | Presse magazine | Généraliste | pt | Medialivre | 2 | https://www.sabado.pt |
-| MED-PT-011 | Exame | Presse magazine | Économie | pt | Trust in News | 2 | https://visao.pt/exame |
-| MED-PT-012 | RTP1 | Télévision | Généraliste | pt | RTP | 1 | https://www.rtp.pt |
-| MED-PT-013 | RTP Notícias | Télévision | Généraliste | pt | RTP | 1 | https://www.rtp.pt/noticias |
-| MED-PT-014 | SIC | Télévision | Généraliste | pt | Impresa (MFE actionnaire 2026) | 1 | https://sic.pt |
-| MED-PT-015 | SIC Notícias | Télévision | Généraliste | pt | Impresa (MFE actionnaire 2026) | 1 | https://sicnoticias.pt |
-| MED-PT-016 | TVI | Télévision | Généraliste | pt | Media Capital | 1 | https://tvi.iol.pt |
-| MED-PT-017 | CNN Portugal | Télévision | Généraliste | pt | Media Capital | 1 | https://cnnportugal.iol.pt |
-| MED-PT-018 | CMTV | Télévision | Généraliste | pt | Medialivre | 2 | https://www.cmjornal.pt/cmtv |
-| MED-PT-019 | Antena 1 | Radio | Généraliste | pt | RTP | 2 | https://www.rtp.pt/antena1 |
-| MED-PT-020 | TSF | Radio | Généraliste | pt | Global Media Group | 2 | https://www.tsf.pt |
-| MED-PT-021 | Rádio Renascença | Radio | Généraliste | pt | Renascença Multimédia | 2 | https://rr.pt |
-| MED-PT-022 | RFM | Radio | Généraliste | pt | Renascença Multimédia | 3 | https://rfm.pt |
-| MED-PT-023 | Rádio Observador | Radio | Généraliste | pt | Observador On Time | 2 | https://observador.pt/radio |
-| MED-PT-024 | Lusa | Agence de presse | Généraliste | pt | Lusa (État portugais) | 1 | https://www.lusa.pt |
-| MED-PT-025 | SAPO | Web natif | Généraliste | pt | Altice Portugal | 2 | https://www.sapo.pt |
-| MED-PT-026 | Notícias ao Minuto | Web natif | Généraliste | pt | Notícias ao Minuto | 2 | https://www.noticiasaominuto.com |
-| MED-PT-027 | Record | Presse quotidienne | Sport | pt | Medialivre | 3 | https://www.record.pt |
-| MED-PT-028 | Jornal Económico | Presse quotidienne | Économie | pt | Grupo Económico | 2 | https://jornaleconomico.sapo.pt |
+**Radio · Nationale** — 1 titres
+France Inter
 
-## Espagne (35 médias — liste cible)
+**TV · Nationale** — 3 titres
+BFMTV, France 2, TF1
 
-| id | Nom | Type | Thématique | Langue | Groupe | Priorité | URL |
-|---|---|---|---|---|---|---|---|
-| MED-ES-001 | El País | Presse quotidienne | Généraliste | es | PRISA | 1 | https://elpais.com |
-| MED-ES-002 | El Mundo | Presse quotidienne | Généraliste | es | Unidad Editorial | 1 | https://www.elmundo.es |
-| MED-ES-003 | ABC | Presse quotidienne | Généraliste | es | Vocento | 1 | https://www.abc.es |
-| MED-ES-004 | La Vanguardia | Presse quotidienne | Généraliste | es | Grupo Godó | 1 | https://www.lavanguardia.com |
-| MED-ES-005 | El Periódico | Presse quotidienne | Généraliste | es | Prensa Ibérica | 2 | https://www.elperiodico.com |
-| MED-ES-006 | La Razón | Presse quotidienne | Généraliste | es | Grupo Planeta | 2 | https://www.larazon.es |
-| MED-ES-007 | 20 Minutos | Presse quotidienne | Généraliste | es | Henneo | 2 | https://www.20minutos.es |
-| MED-ES-008 | El Confidencial | Web natif | Généraliste | es | Titania Compañía Editorial | 1 | https://www.elconfidencial.com |
-| MED-ES-009 | elDiario.es | Web natif | Généraliste | es | Diario de Prensa Digital | 1 | https://www.eldiario.es |
-| MED-ES-010 | Ara | Presse quotidienne | Généraliste | ca | Edició de Premsa Periòdica Ara | 2 | https://www.ara.cat |
-| MED-ES-011 | La Voz de Galicia | Presse quotidienne | Régional | es | Corporación Voz de Galicia | 2 | https://www.lavozdegalicia.es |
-| MED-ES-012 | El Correo | Presse quotidienne | Régional | es | Vocento | 2 | https://www.elcorreo.com |
-| MED-ES-013 | Expansión | Presse quotidienne | Économie | es | Unidad Editorial | 1 | https://www.expansion.com |
-| MED-ES-014 | Cinco Días | Presse quotidienne | Économie | es | PRISA | 1 | https://cincodias.elpais.com |
-| MED-ES-015 | El Economista | Presse quotidienne | Économie | es | Editorial Ecoprensa | 2 | https://www.eleconomista.es |
-| MED-ES-016 | Marca | Presse quotidienne | Sport | es | Unidad Editorial | 2 | https://www.marca.com |
-| MED-ES-017 | AS | Presse quotidienne | Sport | es | PRISA | 2 | https://as.com |
-| MED-ES-018 | TVE La 1 | Télévision | Généraliste | es | RTVE | 1 | https://www.rtve.es/play/la-1/ |
-| MED-ES-019 | Antena 3 | Télévision | Généraliste | es | Atresmedia | 1 | https://www.antena3.com |
-| MED-ES-020 | Telecinco | Télévision | Généraliste | es | Mediaset España / MFE | 1 | https://www.telecinco.es |
-| MED-ES-021 | La Sexta | Télévision | Généraliste | es | Atresmedia | 1 | https://www.lasexta.com |
-| MED-ES-022 | TV3 | Télévision | Généraliste | ca | CCMA | 2 | https://www.ccma.cat/tv3 |
-| MED-ES-023 | Cadena SER | Radio | Généraliste | es | PRISA | 1 | https://cadenaser.com |
-| MED-ES-024 | COPE | Radio | Généraliste | es | Ábside Media | 1 | https://www.cope.es |
-| MED-ES-025 | Onda Cero | Radio | Généraliste | es | Atresmedia | 2 | https://www.ondacero.es |
-| MED-ES-026 | RNE | Radio | Généraliste | es | RTVE | 2 | https://www.rtve.es/radio |
-| MED-ES-027 | RAC1 | Radio | Généraliste | ca | Grupo Godó | 2 | https://www.rac1.cat |
-| MED-ES-028 | EFE | Agence de presse | Généraliste | es | Agencia EFE | 1 | https://www.efe.com |
-| MED-ES-029 | Europa Press | Agence de presse | Généraliste | es | Europa Press | 1 | https://www.europapress.es |
-| MED-ES-030 | RTVE.es | Web natif | Généraliste | es | RTVE | 1 | https://www.rtve.es |
-| MED-ES-031 | El Español | Web natif | Généraliste | es | El León de El Español Publicaciones | 2 | https://www.elespanol.com |
-| MED-ES-032 | OKDiario | Web natif | Généraliste | es | Acción Digital | 3 | https://okdiario.com |
-| MED-ES-033 | VilaWeb | Web natif | Généraliste | ca | Partal, Maresma i Associats | 3 | https://www.vilaweb.cat |
-| MED-ES-034 | La Nueva España | Presse quotidienne | Régional | es | Prensa Ibérica | 3 | https://www.lne.es |
-| MED-ES-035 | El Diario Vasco | Presse quotidienne | Régional | es | Vocento | 3 | https://www.diariovasco.com |
+**Web · Nationale** — 2 titres
+Agence France-Presse, Mediapart
+
+### Belgique
+
+**Print · Nationale** — 244 titres
+De Morgen, De Standaard, De Tijd, Het Laatste Nieuws, Het Nieuwsblad, Knack, L'Echo, La DH / La Dernière Heure, La Libre Belgique, Le Soir, Le Vif, Metro Belgique … +232
+
+**Print · Régionale** — 58 titres
+Gazet van Antwerpen, GrenzEcho, Het Belang van Limburg, L'Avenir, Sudinfo, 't Vrije Volksblad, 'tScheldt, Brüsseler Zeitung, De Beiaard, De Financieel-Economische Tijd, De Gentenaar, De Lloyd … +46
+
+**Radio · Nationale** — 5 titres
+Bel RTL, La Première, Qmusic, Radio 1, Radio Contact
+
+**Radio · Régionale** — 116 titres
+100.5 Das Hitradio, 4fm, 927Live, Antwerpen 1, Antwerpen FM, Association pour la libération des ondes, Belgische Radio- en Televisieomroep, Belgium, BFM Belgium, BNL, BRF1, C-Dance … +104
+
+**TV · Nationale** — 84 titres
+LN24, RTBF / La Une, RTL-TVI, VRT NWS, VTM, AB3, AB4, ABX, Actua TV, ATV, Auvio Kids TV, AVS … +72
+
+**TV · Régionale** — 11 titres
+Boukè, BX1, Canal Zoom, Matélé, Notélé, Qu4tre Liège Média, TV Com, TV Lux, Télé MB, Télésambre, Vedia
+
+**Web · Nationale** — 10 titres
+7sur7, Apache, Belga, 21News, Apache.be, Blokwatch, Cineuropa, Gooya, RTBF, VRT
+
+**Web · Régionale** — 1 titres
+BRUZZ
+
+### Suisse
+
+**Print · Nationale** — 19 titres
+20 Minuten, 20 minutes, Beobachter, Bilan, Bilanz, Blick, Die Weltwoche, Finanz und Wirtschaft, Handelszeitung, L'Agefi, L'Illustré, Le Temps … +7
+
+**Print · Régionale** — 236 titres
+24 heures, Basler Zeitung, Corriere del Ticino, Der Bund, La Liberté, Tribune de Genève, 041 - Das Kulturmagazin, Agefi, Alpen, Die, Alpes, Les, Alpi, Le, Ami de la Nature … +224
+
+**Radio · Nationale** — 21 titres
+RTS La 1ère, Agrarpolitik der Podcast, AKTIV RADIO, Kanal K, plattafurma.fmr.ch, Radio 3FACH, Radio Bern RaBe, Radio LoRa, Radio Munot, Radio RFJ, Radio RJB, radio rottu oberwallis … +9
+
+**Radio · Régionale** — 43 titres
+RTR, Autorité indépendante d'examen des plaintes en matière de radio-télévision, Billag, CH Media, Digital Audio Broadcasting en Suisse, La Radio plus, Metropolys, My105, Radio 24, Radio 7, Radio Basilisk, Radio fréquence Jura … +31
+
+**TV · Nationale** — 103 titres
+RTS, SRF, canal9 Video, rsi Video, rtr Video, rts Vidéo, srf Video, 13th Street, 3 Plus TV, 3+, 3sat, 4 Plus TV … +91
+
+**TV · Régionale** — 2 titres
+RSI, Regionale und Lokale Fernsehsender mit Konzession in der Schweiz
+
+**Web · Nationale** — 173 titres
+AWP Finanznachrichten, Keystone-ATS, Le Matin / lematin.ch, SWI swissinfo.ch, watson, 20 minuten online, 20 minutes online, 24heures.ch, 3fach.ch, aargauerzeitung.ch, aerotelegraph.com, agefi.com … +161
+
+### Portugal
+
+**Print · Nationale** — 563 titres
+Correio da Manhã, Diário de Notícias, Exame, Expresso, Jornal de Negócios, Jornal de Notícias, Jornal Económico, Público, Record, Sábado, Visão, +DIGITAL DECO PROTeste … +551
+
+**Print · Régionale** — 531 titres
++Aguiar da Beira, 100 Maiores Empresas dos Açores, A Aurora do Lima, A Comarca de Arganil, A Crença, A Forte Arronches, A Guarda, A Magazine - Invest. Live. Belong., A Magazine PT, A Nossa Terra, A Noz, A Planície … +519
+
+**Radio · Nationale** — 9 titres
+Antena 1, RFM, Rádio Observador, Rádio Renascença, TSF, Renascença, RTP Antena 1 Açores, RTP Antena 1 Madeira, RTP Antena 3 Madeira
+
+**Radio · Régionale** — 500 titres
+(REP) Rádio Esperança Popular, 00's RFM, 102FM Rádio, 105.4 FM, 80's RFM (Oitenta's), 90's RFM, 91 FM Rádio, ABC Portugal, All Stars Radio, Alternativa Rádio, Alto Tâmega FM, Antena Mundial … +488
+
+**TV · Nationale** — 150 titres
+CMTV, CNN Portugal, RTP Notícias, RTP1, SIC, SIC Notícias, TVI, 11, Azores TV, BTV 1, Canal BLAST, CANAL NOS … +138
+
+**TV · Régionale** — 7 titres
+Famatv, Naminhaterratv, RTC - Rádio e Televisão Cristã, TV Maná Brasil, TV Maná Moçambique, TV Maná-1, TV Maná-2
+
+**Web · Nationale** — 439 titres
+ECO, Lusa, Notícias ao Minuto, Observador, SAPO, (OBS*) Observatório, +M, 24 Notícias, 24Horas, 351 Sports, 4gnews, 7 Margens … +427
+
+**Web · Régionale** — 246 titres
+21 TV-Canal de Informação e Entretenimento Regional, 41N, A Voz da Feira, A Voz de Azeméis, A Voz de Bragança, A Voz de Castelo Branco, A Voz de Matosinhos, A Voz de Évora, A Voz do Algarve, ADN - Agência de Notícias, AFA TV, Agência de Informação Norte … +234
+
+### Espagne
+
+**Print · Nationale** — 29 titres
+20 Minutos, ABC, AS, Cinco Días, El Economista, El Mundo, El País, El Periódico, Expansión, La Razón, La Vanguardia, Marca … +17
+
+**Print · Régionale** — 662 titres
+Ara, El Correo, El Diario Vasco, La Nueva España, La Voz de Galicia, A gran historia de Galicia, A Nosa Terra, A todo color, A Voz de Vilalba, A Voz do País, Acció, Acción … +650
+
+**Radio · Nationale** — 4 titres
+Cadena SER, COPE, Onda Cero, RNE
+
+**Radio · Régionale** — 165 titres
+RAC1, 40 Móvil, Agrupación Independiente de Radiodifusión Entreculturas, Alzira radio, Aragón Radio, Aragón Radio 2.com, Atlántica FM, Bay Radio, Bit FM Pamplona, BOM Radio, Cadena 100, Cadena COPE … +153
+
+**TV · Nationale** — 186 titres
+Antena 3, La Sexta, Telecinco, TVE La 1, 0 por M+, 0 por Movistar Plus+, 24 Horas, 3CatInfo, 3XL, 7NN, 8TV, Acción por M+ … +174
+
+**TV · Régionale** — 2 titres
+TV3, La 10 Madrid
+
+**Web · Nationale** — 8 titres
+EFE, El Confidencial, El Español, elDiario.es, Europa Press, OKDiario, RTVE.es, José Antonio Pérez Tapias
+
+**Web · Régionale** — 1 titres
+VilaWeb

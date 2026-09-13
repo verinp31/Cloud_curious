@@ -709,16 +709,10 @@ def write_catalog(path: Path, records: list[dict[str, object]]) -> None:
 
 
 def main() -> None:
-    here = Path(__file__).resolve().parent
-    records = as_records()
-    write_csv(here / "ref_media.csv", records)
-    write_json(here / "ref_media.json", records)
-    write_sql(here / "ref_media.sql")
-    write_catalog(here / "CATALOGUE.md", records)
-    counts: dict[str, int] = {}
-    for rec in records:
-        counts[str(rec["pays_code"])] = counts.get(str(rec["pays_code"]), 0) + 1
-    print("écrit", len(records), "lignes", counts)
+    """Le seed reste ici. Le référentiel étendu est produit par harvest_and_build."""
+    from harvest_and_build import main as harvest_main
+
+    harvest_main()
 
 
 if __name__ == "__main__":
