@@ -40,6 +40,21 @@ python3 ref-data/ref_media/build_oxyhub.py
 | Belgique | Wikipedia + seed RP |
 | Espagne | Wikipedia + seed RP |
 
-## Arbitrage ouvert
+## « Média étranger » — dérivé, pas stocké
 
-Pour un usage **RP France** (pitcher El País depuis Paris), faut-il une seconde ligne `famille_media = Médias étrangers` + `couverture_geo = Internationale` ? Aujourd’hui chaque titre est traité comme média **domestique** de son pays.
+Le dump France mettait `famille_media = Médias étrangers` **sur la fiche média**. Ça ne tient que pour un observateur unique (la France). Dès qu’un client belge ou suisse utilise le même référentiel, la fiche devient fausse.
+
+**Règle :** une seule fiche par titre, avec son `pays_code`. « Étranger » se calcule :
+
+```
+is_foreign = (media.pays_code != marche.pays_code)
+```
+
+- **Runtime (app)** : comparaison à la volée, pas de seconde ligne dans le CSV.
+- **BI / warehouse** : même règle à la synchro, dénormalisée **par marché** (pas sur `dim_media` seule).
+
+Le bon comparateur n’est pas le siège de l’agence ni le pays de l’utilisateur connecté : c’est le **marché de la campagne** (ou le pays de l’annonceur). Une agence parisienne qui pitche pour une marque suisse doit voir la NZZ comme domestique.
+
+À ne pas confondre avec `couverture_geo = Internationale` (portée éditoriale : AFP, EFE) : un fil d’agence n’est pas « étranger », c’est un *wire*.
+
+Filtres utiles en plus, toujours dérivés : même zone linguistique (`langue` média ∩ langues du marché), voisinage (FR↔BE francophone).
