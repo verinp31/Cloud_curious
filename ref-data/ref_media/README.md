@@ -1,61 +1,45 @@
-# Table `ref_media`
+# Médias BE / CH / PT / ES
 
-Référentiel médias calé sur la **base France** (13 000 titres) :
+Livrable : **`ref_media.csv`**.
 
-1. **Type** : `Web` · `Print` · `TV` · `Radio`
-2. **Couverture** : `Nationale` · `Régionale`
-
-La France n’est pas rechargée ici (tu as déjà les 13 000). Les listes cibles sont **Belgique, Suisse, Portugal, Espagne**.
-
-## Volumes (rebuild septembre 2026)
-
-| Pays | Web | Print | TV | Radio | Nationale | Régionale | Total |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Belgique | 11 | 302 | 95 | 121 | 343 | 186 | 529 |
-| Suisse | 173 | 255 | 105 | 64 | 316 | 281 | 597 |
-| Portugal | 685 | 1 094 | 157 | 509 | 1 161 | 1 284 | 2 445 |
-| Espagne | 9 | 691 | 188 | 169 | 227 | 830 | 1 057 |
-| France (mapping) | 2 | 4 | 3 | 1 | 10 | 0 | 10 |
-
-**4 638 médias** après dédoublonnage. Détail : `CATALOGUE.md`.
-
-Ce n’est **pas** 13 000 par pays. En France, ce volume vient d’un fichier métier (locaux, associatifs, newsletters, web de niche). Les sources publiques équivalentes :
-
-| Pays | Source principale | Plafond réaliste |
-|---|---|---|
-| Portugal | **ERC** — registres officiels au 01/09/2026 | ~2 200 OCS actifs (quasi complet) |
-| Suisse | **Swissdox** (titres *aktuell*) + Wikipedia | centaines, pas des milliers |
-| Belgique | Wikipedia + seed RP | Presscloud cite 950+ ; on est en dessous |
-| Espagne | Wikipedia (journaux régionaux, radios, TV) | le registre audiovisuel d’État + CCAA ferait monter le TV/radio |
+Les **valeurs** (type, famille, thématique, couverture) reprennent le vocabulaire de la base France [`OXYHUB_PROD_REF_MEDIA.sql`](https://github.com/verinp31/Cloud_curious/blob/master/OXYHUB_PROD_REF_MEDIA.sql). Pas de format dump / MySQL — tu changes de base plus tard.
 
 ## Colonnes
 
 | Colonne | Valeurs |
 |---|---|
-| `type_media` | `Web` `Print` `TV` `Radio` |
-| `couverture` | `Nationale` `Régionale` |
-| `priorite_rp` | 1–2 = seed pitching, 3 = registre / Wikipedia |
+| `id` | `MED-BE-0001` … |
+| `nom` | Titre, casse d’origine |
+| `pays_code` / `pays_nom` | BE Belgique · CH Suisse · PT Portugal · ES Espagne |
+| `langue` | `fr` `nl` `de` `pt` `es` `it` … |
+| `type_media` | `WEB` `PRESSE` `TV` `RADIO` `AGENCES` |
+| `famille_media` | PQN, PQR, radios nationales, TV grandes chaînes, blogs… |
+| `thematique_media` | `Actualités-Infos Générales`, `Economie - Services`, … |
+| `couverture_geo` | `Nationale` · `Régionale/Départementale` · `Internationale` |
+| `url` `groupe_media` `ville` `periodicite` | Quand la source les donne |
 | `source_liste` | `SEED` `ERC` `SWISSDOX` `WIKIPEDIA` |
+| `priorite_rp` | 1 = incontournable · 2 = important · 3 = registre |
 
-Les champs `support`, `periodicite`, `thematique`, `groupe_media`, `ville`, `url` sont remplis quand la source les donne (surtout ERC).
-
-Mapping seed → tes catégories : quotidien / magazine → Print ; web natif / agence → Web ; télévision → TV ; radio → Radio. `Internationale` → `Nationale`.
-
-## Fichiers
-
-| Fichier | Usage |
-|---|---|
-| `ref_media.csv` | Import tableur / AppSheet |
-| `ref_media.sql` | PostgreSQL |
-| `ref_media.json` | API / mock |
-| `CATALOGUE.md` | Synthèse + titres prioritaires |
-| `harvest/official/pt_*.csv` | Extraits ERC 01/09/2026 |
-| `harvest_and_build.py` | Rebuild |
+France exclue (tu as déjà les 13 771).
 
 ## Rebuild
 
 ```sh
-python3 ref-data/ref_media/harvest_and_build.py
+python3 ref-data/ref_media/test_oxyhub_map.py
+python3 ref-data/ref_media/build_oxyhub.py
 ```
 
-`generate_ref_media.py` conserve le **seed prioritaire** (titres RP incontournables).
+`build_oxyhub.py` relit `ref_media.json` (harvest) et réécrit le CSV. Pas de réseau.
+
+## Sources harvest
+
+| Pays | Source |
+|---|---|
+| Portugal | ERC (registres 01/09/2026) |
+| Suisse | Swissdox + Wikipedia |
+| Belgique | Wikipedia + seed RP |
+| Espagne | Wikipedia + seed RP |
+
+## Arbitrage ouvert
+
+Pour un usage **RP France** (pitcher El País depuis Paris), faut-il une seconde ligne `famille_media = Médias étrangers` + `couverture_geo = Internationale` ? Aujourd’hui chaque titre est traité comme média **domestique** de son pays.

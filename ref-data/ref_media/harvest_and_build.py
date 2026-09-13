@@ -43,7 +43,7 @@ TYPE_MAP_SEED = {
     "Web natif": "Web",
     "Télévision": "TV",
     "Radio": "Radio",
-    "Agence de presse": "Web",
+    "Agence de presse": "AGENCES",
 }
 
 SKIP_TITLE_RE = re.compile(
@@ -132,7 +132,7 @@ def load_seed() -> list[dict]:
     for raw in SEED_ROWS:
         rec = dict(zip(COLUMNS, raw))
         rec["type_media"] = TYPE_MAP_SEED.get(str(rec["type_media"]), str(rec["type_media"]))
-        if rec["type_media"] not in {"Web", "Print", "TV", "Radio"}:
+        if rec["type_media"] not in {"Web", "Print", "TV", "Radio", "AGENCES"}:
             rec["type_media"] = "Web"
         rec["couverture"] = "Nationale" if rec["couverture"] == "Internationale" else rec["couverture"]
         rec["support"] = rec["type_media"]
@@ -320,8 +320,8 @@ def parse_erc_agencies(path: Path) -> list[dict]:
                 "nom": nom,
                 "pays_code": "PT",
                 "langue": "pt",
-                "type_media": "Web",
-                "support": "Web",
+                "type_media": "AGENCES",
+                "support": "Agence",
                 "periodicite": "Continu",
                 "thematique": "Généraliste",
                 "couverture": "Nationale",
@@ -365,6 +365,7 @@ SWISSDOX_TYPE = {
     "onlinemedium": "Web",
     "audio": "Radio",
     "video": "TV",
+    "nachrichtenagentur": "AGENCES",
 }
 
 
@@ -406,7 +407,7 @@ def harvest_swissdox() -> list[dict]:
         if not re.search(r"\bCH\b", joined):
             continue
         type_media = SWISSDOX_TYPE.get(fold(typ), map_type_from_text(typ, nom) or "Print")
-        if type_media not in {"Web", "Print", "TV", "Radio"}:
+        if type_media not in {"Web", "Print", "TV", "Radio", "AGENCES"}:
             type_media = "Print"
         if nom.lower() in {"titel", "title"}:
             continue
@@ -468,7 +469,7 @@ def harvest_swissdox() -> list[dict]:
                     "nom": nom,
                     "pays_code": "CH",
                     "langue": lang,
-                    "type_media": type_media if type_media in {"Web", "Print", "TV", "Radio"} else "Print",
+                    "type_media": type_media if type_media in {"Web", "Print", "TV", "Radio", "AGENCES"} else "Print",
                     "support": typ,
                     "periodicite": cells[4] if len(cells) > 4 else "",
                     "thematique": "Généraliste",
@@ -931,6 +932,10 @@ def main() -> None:
     print("  types", Counter(r["type_media"] for r in merged))
     write_outputs(merged)
     print("écrit", HERE)
+    from build_oxyhub import main as oxyhub_main
+
+    print("oxyhub…")
+    oxyhub_main()
 
 
 if __name__ == "__main__":
