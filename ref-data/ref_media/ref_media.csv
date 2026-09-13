@@ -35,7 +35,7 @@ MED-BE-023,BELRTL,Bel RTL,BE,Belgique,fr,Radio,Audiovisuel,Continu,Généraliste
 MED-BE-024,RADIOCONTACT,Radio Contact,BE,Belgique,fr,Radio,Audiovisuel,Continu,Généraliste,Nationale,RTL Belgium,Bruxelles,https://www.radiocontact.be,3,true,Radio musicale ; utile pour visibilité grand public.,CIBLE
 MED-BE-025,RADIO1,Radio 1,BE,Belgique,nl,Radio,Audiovisuel,Continu,Généraliste,Nationale,VRT,Bruxelles,https://www.radio1.be,2,true,Radio généraliste de service public flamand.,CIBLE
 MED-BE-026,QMUSIC,Qmusic,BE,Belgique,nl,Radio,Audiovisuel,Continu,Généraliste,Nationale,DPG Media,Vilvoorde,https://qmusic.be,3,true,Radio musicale flamande à forte audience.,CIBLE
-MED-BE-027,BELGA,Belga,BE,Belgique,fr,Agence de presse,Agence,Continu,Généraliste,Nationale,Belga News Agency,Bruxelles,https://www.belga.be,1,true,"Agence nationale (FR/NL, sélection EN). Fil d'entrée prioritaire des CP.",CIBLE
+MED-BE-027,BELGA,Belga,BE,Belgique,fr,Agence de presse,Agence,Continu,Généraliste,Nationale,Belga News Agency,Bruxelles,https://www.belganewsagency.eu/,1,true,Agence nationale (FR/NL + EN). Site corporate belga.be ; fil public EN.,CIBLE
 MED-BE-028,BRUZZ,BRUZZ,BE,Belgique,nl,Web natif,Digital,Continu,Régional,Régionale,Vlaams-Brusselse Media,Bruxelles,https://www.bruzz.be,2,true,"Média bruxellois (NL, contenus aussi en FR/EN).",CIBLE
 MED-BE-029,GRENZECHO,GrenzEcho,BE,Belgique,de,Presse quotidienne,Print+Digital,Quotidien,Régional,Régionale,Grenz-Echo / Groupe Rossel,Eupen,https://www.grenzecho.net,3,true,Quotidien de la Communauté germanophone.,CIBLE
 MED-BE-030,7SUR7,7sur7,BE,Belgique,fr,Web natif,Digital,Continu,Généraliste,Nationale,DPG Media,Anvers,https://www.7sur7.be,2,true,Pure player francophone du groupe HLN.,CIBLE
@@ -62,7 +62,7 @@ MED-CH-018,FUW,Finanz und Wirtschaft,CH,Suisse,de,Presse quotidienne,Print+Digit
 MED-CH-019,SRF,SRF,CH,Suisse,de,Télévision,Audiovisuel,Continu,Généraliste,Nationale,SRG SSR,Zurich,https://www.srf.ch,1,true,Unité alémanique du service public (TV + radio). Liste COPA.,CIBLE
 MED-CH-020,RTS,RTS,CH,Suisse,fr,Télévision,Audiovisuel,Continu,Généraliste,Nationale,SRG SSR,Genève,https://www.rts.ch,1,true,Unité romande du service public (TV + radio). Liste COPA.,CIBLE
 MED-CH-021,RSI,RSI,CH,Suisse,it,Télévision,Audiovisuel,Continu,Généraliste,Régionale,SRG SSR,Lugano,https://www.rsi.ch,1,true,Unité italophone du service public. Liste COPA.,CIBLE
-MED-CH-022,RTS1ERE,RTS La 1ère,CH,Suisse,fr,Radio,Audiovisuel,Continu,Généraliste,Nationale,SRG SSR,Lausanne,https://www.rts.ch/audio-podcast/live/la-1ere,2,true,Radio généraliste romande de service public.,CIBLE
+MED-CH-022,RTS1ERE,RTS La 1ère,CH,Suisse,fr,Radio,Audiovisuel,Continu,Généraliste,Nationale,SRG SSR,Lausanne,https://www.rts.ch/rts-premiere/,2,true,Radio généraliste romande de service public.,CIBLE
 MED-CH-023,SWI,SWI swissinfo.ch,CH,Suisse,fr,Web natif,Digital,Continu,Généraliste,Internationale,SRG SSR,Berne,https://www.swissinfo.ch,1,true,Offre internationale de la SSR (plusieurs langues). Liste COPA.,CIBLE
 MED-CH-024,KEYSTONE,Keystone-ATS,CH,Suisse,fr,Agence de presse,Agence,Continu,Généraliste,Nationale,Keystone-SDA-ATS,Berne,https://www.keystone-sda.ch,1,true,Agence nationale (DE/FR/IT).,CIBLE
 MED-CH-025,AWP,AWP Finanznachrichten,CH,Suisse,de,Agence de presse,Agence,Continu,Économie,Nationale,AWP,Zurich,https://www.awp.ch,1,true,Agence financière. Liste COPA (avec Reuters / Bloomberg).,CIBLE
@@ -88,11 +88,11 @@ MED-PT-014,SIC,SIC,PT,Portugal,pt,Télévision,Audiovisuel,Continu,Généraliste
 MED-PT-015,SICN,SIC Notícias,PT,Portugal,pt,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Impresa (MFE actionnaire 2026),Lisbonne,https://sicnoticias.pt,1,true,Chaîne d'info ; portée hebdo SIC+SICN ~60 % (DNR 2026).,CIBLE
 MED-PT-016,TVI,TVI,PT,Portugal,pt,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Media Capital,Queluz de Baixo,https://tvi.iol.pt,1,true,Chaîne privée généraliste.,CIBLE
 MED-PT-017,CNNPT,CNN Portugal,PT,Portugal,pt,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Media Capital,Queluz de Baixo,https://cnnportugal.iol.pt,1,true,Chaîne d'info ; 2e portée hebdo DNR 2026 (~40 %).,CIBLE
-MED-PT-018,CMTV,CMTV,PT,Portugal,pt,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Medialivre,Lisbonne,https://www.cm-tv.pt,2,true,Chaîne d'info populaire liée au Correio da Manhã.,CIBLE
+MED-PT-018,CMTV,CMTV,PT,Portugal,pt,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Medialivre,Lisbonne,https://www.cmjornal.pt/cmtv,2,true,Chaîne d'info populaire liée au Correio da Manhã.,CIBLE
 MED-PT-019,ANTENA1,Antena 1,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,RTP,Lisbonne,https://www.rtp.pt/antena1,2,true,Radio généraliste de service public.,CIBLE
 MED-PT-020,TSF,TSF,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,Global Media Group,Lisbonne,https://www.tsf.pt,2,true,Radio d'information de référence.,CIBLE
-MED-PT-021,RENASCENCA,Rádio Renascença,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,Renascença Multimédia,Lisbonne,https://rr.sapo.pt,2,true,Radio généraliste (groupe catholique).,CIBLE
-MED-PT-022,RFM,RFM,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,Renascença Multimédia,Lisbonne,https://rfm.sapo.pt,3,true,Radio musicale à forte audience.,CIBLE
+MED-PT-021,RENASCENCA,Rádio Renascença,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,Renascença Multimédia,Lisbonne,https://rr.pt,2,true,Radio généraliste (groupe catholique).,CIBLE
+MED-PT-022,RFM,RFM,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,Renascença Multimédia,Lisbonne,https://rfm.pt,3,true,Radio musicale à forte audience.,CIBLE
 MED-PT-023,RADIOOBS,Rádio Observador,PT,Portugal,pt,Radio,Audiovisuel,Continu,Généraliste,Nationale,Observador On Time,Lisbonne,https://observador.pt/radio,2,true,Radio du pure player Observador.,CIBLE
 MED-PT-024,LUSA,Lusa,PT,Portugal,pt,Agence de presse,Agence,Continu,Généraliste,Nationale,Lusa (État portugais),Lisbonne,https://www.lusa.pt,1,true,Agence nationale ; propriété 100 % État. Fil prioritaire des CP.,CIBLE
 MED-PT-025,SAPO,SAPO,PT,Portugal,pt,Web natif,Digital,Continu,Généraliste,Nationale,Altice Portugal,Lisbonne,https://www.sapo.pt,2,true,Portail d'agrégation / audience digitale large.,CIBLE
@@ -116,7 +116,7 @@ MED-ES-014,CINCODIAS,Cinco Días,ES,Espagne,es,Presse quotidienne,Print+Digital,
 MED-ES-015,ELECONOMISTA,El Economista,ES,Espagne,es,Presse quotidienne,Print+Digital,Quotidien,Économie,Nationale,Editorial Ecoprensa,Madrid,https://www.eleconomista.es,2,true,"Quotidien / site éco (1,4 M VU EGM 2026).",CIBLE
 MED-ES-016,MARCA,Marca,ES,Espagne,es,Presse quotidienne,Print+Digital,Quotidien,Sport,Nationale,Unidad Editorial,Madrid,https://www.marca.com,2,true,1er quotidien en lecteurs EGM 2026 (881k). Angle sport uniquement.,CIBLE
 MED-ES-017,AS,AS,ES,Espagne,es,Presse quotidienne,Print+Digital,Quotidien,Sport,Nationale,PRISA,Madrid,https://as.com,2,true,"Quotidien sportif (369k EGM ; 2,8 M VU web).",CIBLE
-MED-ES-018,TVE1,TVE La 1,ES,Espagne,es,Télévision,Audiovisuel,Continu,Généraliste,Nationale,RTVE,Madrid,https://www.rtve.es/television/la-1,1,true,"Chaîne public, 2e audience TV (13,6 % EGM/audimétrie 2026).",CIBLE
+MED-ES-018,TVE1,TVE La 1,ES,Espagne,es,Télévision,Audiovisuel,Continu,Généraliste,Nationale,RTVE,Madrid,https://www.rtve.es/play/la-1/,1,true,"Chaîne public, 2e audience TV (13,6 % EGM/audimétrie 2026).",CIBLE
 MED-ES-019,ANTENA3,Antena 3,ES,Espagne,es,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Atresmedia,Madrid,https://www.antena3.com,1,true,"Leader TV 2026 (16,9 % de part d'audience).",CIBLE
 MED-ES-020,TELECINCO,Telecinco,ES,Espagne,es,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Mediaset España / MFE,Madrid,https://www.telecinco.es,1,true,"3e chaîne (9,4 % 2026).",CIBLE
 MED-ES-021,LASEXTA,La Sexta,ES,Espagne,es,Télévision,Audiovisuel,Continu,Généraliste,Nationale,Atresmedia,Madrid,https://www.lasexta.com,1,true,"Chaîne info / débat, utile pour angles société / politique.",CIBLE

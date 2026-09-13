@@ -49,7 +49,7 @@ Priorité RP : **1** incontournable · **2** important · **3** complémentaire.
 | MED-BE-024 | Radio Contact | Radio | Généraliste | fr | RTL Belgium | 3 | https://www.radiocontact.be |
 | MED-BE-025 | Radio 1 | Radio | Généraliste | nl | VRT | 2 | https://www.radio1.be |
 | MED-BE-026 | Qmusic | Radio | Généraliste | nl | DPG Media | 3 | https://qmusic.be |
-| MED-BE-027 | Belga | Agence de presse | Généraliste | fr | Belga News Agency | 1 | https://www.belga.be |
+| MED-BE-027 | Belga | Agence de presse | Généraliste | fr | Belga News Agency | 1 | https://www.belganewsagency.eu/ |
 | MED-BE-028 | BRUZZ | Web natif | Régional | nl | Vlaams-Brusselse Media | 2 | https://www.bruzz.be |
 | MED-BE-029 | GrenzEcho | Presse quotidienne | Régional | de | Grenz-Echo / Groupe Rossel | 3 | https://www.grenzecho.net |
 | MED-BE-030 | 7sur7 | Web natif | Généraliste | fr | DPG Media | 2 | https://www.7sur7.be |
@@ -81,7 +81,7 @@ Priorité RP : **1** incontournable · **2** important · **3** complémentaire.
 | MED-CH-019 | SRF | Télévision | Généraliste | de | SRG SSR | 1 | https://www.srf.ch |
 | MED-CH-020 | RTS | Télévision | Généraliste | fr | SRG SSR | 1 | https://www.rts.ch |
 | MED-CH-021 | RSI | Télévision | Généraliste | it | SRG SSR | 1 | https://www.rsi.ch |
-| MED-CH-022 | RTS La 1ère | Radio | Généraliste | fr | SRG SSR | 2 | https://www.rts.ch/audio-podcast/live/la-1ere |
+| MED-CH-022 | RTS La 1ère | Radio | Généraliste | fr | SRG SSR | 2 | https://www.rts.ch/rts-premiere/ |
 | MED-CH-023 | SWI swissinfo.ch | Web natif | Généraliste | fr | SRG SSR | 1 | https://www.swissinfo.ch |
 | MED-CH-024 | Keystone-ATS | Agence de presse | Généraliste | fr | Keystone-SDA-ATS | 1 | https://www.keystone-sda.ch |
 | MED-CH-025 | AWP Finanznachrichten | Agence de presse | Économie | de | AWP | 1 | https://www.awp.ch |
@@ -112,11 +112,11 @@ Priorité RP : **1** incontournable · **2** important · **3** complémentaire.
 | MED-PT-015 | SIC Notícias | Télévision | Généraliste | pt | Impresa (MFE actionnaire 2026) | 1 | https://sicnoticias.pt |
 | MED-PT-016 | TVI | Télévision | Généraliste | pt | Media Capital | 1 | https://tvi.iol.pt |
 | MED-PT-017 | CNN Portugal | Télévision | Généraliste | pt | Media Capital | 1 | https://cnnportugal.iol.pt |
-| MED-PT-018 | CMTV | Télévision | Généraliste | pt | Medialivre | 2 | https://www.cm-tv.pt |
+| MED-PT-018 | CMTV | Télévision | Généraliste | pt | Medialivre | 2 | https://www.cmjornal.pt/cmtv |
 | MED-PT-019 | Antena 1 | Radio | Généraliste | pt | RTP | 2 | https://www.rtp.pt/antena1 |
 | MED-PT-020 | TSF | Radio | Généraliste | pt | Global Media Group | 2 | https://www.tsf.pt |
-| MED-PT-021 | Rádio Renascença | Radio | Généraliste | pt | Renascença Multimédia | 2 | https://rr.sapo.pt |
-| MED-PT-022 | RFM | Radio | Généraliste | pt | Renascença Multimédia | 3 | https://rfm.sapo.pt |
+| MED-PT-021 | Rádio Renascença | Radio | Généraliste | pt | Renascença Multimédia | 2 | https://rr.pt |
+| MED-PT-022 | RFM | Radio | Généraliste | pt | Renascença Multimédia | 3 | https://rfm.pt |
 | MED-PT-023 | Rádio Observador | Radio | Généraliste | pt | Observador On Time | 2 | https://observador.pt/radio |
 | MED-PT-024 | Lusa | Agence de presse | Généraliste | pt | Lusa (État portugais) | 1 | https://www.lusa.pt |
 | MED-PT-025 | SAPO | Web natif | Généraliste | pt | Altice Portugal | 2 | https://www.sapo.pt |
@@ -145,7 +145,7 @@ Priorité RP : **1** incontournable · **2** important · **3** complémentaire.
 | MED-ES-015 | El Economista | Presse quotidienne | Économie | es | Editorial Ecoprensa | 2 | https://www.eleconomista.es |
 | MED-ES-016 | Marca | Presse quotidienne | Sport | es | Unidad Editorial | 2 | https://www.marca.com |
 | MED-ES-017 | AS | Presse quotidienne | Sport | es | PRISA | 2 | https://as.com |
-| MED-ES-018 | TVE La 1 | Télévision | Généraliste | es | RTVE | 1 | https://www.rtve.es/television/la-1 |
+| MED-ES-018 | TVE La 1 | Télévision | Généraliste | es | RTVE | 1 | https://www.rtve.es/play/la-1/ |
 | MED-ES-019 | Antena 3 | Télévision | Généraliste | es | Atresmedia | 1 | https://www.antena3.com |
 | MED-ES-020 | Telecinco | Télévision | Généraliste | es | Mediaset España / MFE | 1 | https://www.telecinco.es |
 | MED-ES-021 | La Sexta | Télévision | Généraliste | es | Atresmedia | 1 | https://www.lasexta.com |
