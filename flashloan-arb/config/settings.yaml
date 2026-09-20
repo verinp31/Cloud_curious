@@ -1,0 +1,40 @@
+# Flashloan arbitrage demo settings
+# Mode: simulate | scan | live
+mode: simulate
+
+poll_seconds: 3
+min_profit_usd: 5.0
+max_loan_usd: 50000.0
+flashloan_premium_bps: 5  # Aave V3 ~0.05%
+
+# Gas estimate used for net-profit filter (USD)
+estimated_gas_usd: 2.5
+
+pairs:
+  - base: WETH
+    quote: USDC
+    dex_a: uniswap_v2
+    dex_b: sushiswap
+  - base: WBTC
+    quote: USDC
+    dex_a: uniswap_v2
+    dex_b: sushiswap
+
+# Simulated mid prices + noise (simulate mode only)
+simulation:
+  mid_prices:
+    WETH_USDC: 3200.0
+    WBTC_USDC: 64000.0
+  # Max relative spread injected between DEXs (e.g. 0.004 = 0.4%)
+  max_spread: 0.004
+  noise: 0.0015
+
+# Addresses are placeholders — replace before any on-chain use
+contracts:
+  flashloan_arb: "0x0000000000000000000000000000000000000000"
+  aave_pool: "0x0000000000000000000000000000000000000000"  # set to Aave PoolAddressesProvider
+
+tokens:
+  WETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+  USDC: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+  WBTC: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
