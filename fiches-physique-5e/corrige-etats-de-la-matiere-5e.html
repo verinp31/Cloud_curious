@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Corrigé — Les états de la matière — 5e</title>
+<style>
+  @page {
+    size: A4;
+    margin: 13mm 13mm 16mm 13mm;
+    @top-left {
+      content: "Physique-Chimie — 5e — Activité 2 — Corrigé";
+      font-family: "Liberation Sans", sans-serif;
+      font-size: 9pt;
+      color: #3d5c49;
+    }
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: "Liberation Sans", sans-serif;
+      font-size: 9pt;
+      color: #3d5c49;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #1c2833;
+    font-family: "Liberation Sans", "Nimbus Sans", sans-serif;
+    font-size: 11.5pt;
+    line-height: 1.4;
+  }
+
+  header.bandeau {
+    background: #0f6b45;
+    color: white;
+    border-radius: 8px;
+    padding: 11px 16px 12px;
+    margin-bottom: 8px;
+  }
+
+  .kicker {
+    font-size: 9pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.92;
+    margin: 0 0 3px;
+  }
+
+  h1 {
+    font-size: 16.5pt;
+    line-height: 1.2;
+    margin: 0 0 3px;
+    font-weight: 700;
+  }
+
+  .chap { margin: 0; font-size: 10.5pt; }
+
+  .etiquettes {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #f3c15a;
+    color: #1c2833;
+    font-weight: 700;
+    font-size: 10pt;
+    border-radius: 999px;
+    padding: 2px 10px;
+  }
+
+  .badge.second {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.75);
+    font-weight: 400;
+  }
+
+  .consigne {
+    background: #eef8f2;
+    border: 1px solid #b7dfc8;
+    border-radius: 6px;
+    padding: 7px 12px 8px;
+    margin: 8px 0 2px;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  .consigne strong { color: #0f6b45; }
+
+  h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 12.5pt;
+    color: #0f6b45;
+    margin: 0 0 5px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h2 .pts {
+    margin-left: auto;
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #0f6b45;
+    background: #e5f6ec;
+    border-radius: 999px;
+    padding: 1px 8px;
+    white-space: nowrap;
+  }
+
+  .exo {
+    border-left: 4px solid #0f6b45;
+    padding: 1px 0 1px 12px;
+    margin: 10px 0 0;
+  }
+
+  .exo p { margin: 0 0 5px; }
+
+  .rep {
+    background: #d9f2e3;
+    color: #0d5a30;
+    font-weight: 700;
+    padding: 0 4px 1px;
+    border-bottom: 2px solid #1d8a4e;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .note {
+    background: #f7f5f2;
+    border-radius: 5px;
+    padding: 5px 9px;
+    margin: 4px 0 2px;
+    font-size: 10pt;
+    line-height: 1.35;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .note strong { color: #0f6b45; }
+
+  table.changements {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2px 0 4px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  table.changements th {
+    background: #0f6b45;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding: 4px 8px;
+    font-size: 10.5pt;
+  }
+
+  table.changements td {
+    border: 1px solid #c5d6cc;
+    padding: 4px 8px;
+    vertical-align: middle;
+  }
+
+  table.changements tr:nth-child(even) td { background: #f3faf6; }
+
+  .item { margin: 0 0 4px; line-height: 1.55; }
+  .item .n { font-weight: 700; color: #0f6b45; }
+
+  .etape {
+    margin: 0 0 5px;
+    line-height: 1.55;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .pastille {
+    display: inline-block;
+    width: 5.2mm;
+    height: 5.2mm;
+    line-height: 5.2mm;
+    text-align: center;
+    border-radius: 50%;
+    background: #0f6b45;
+    color: white;
+    font-size: 9pt;
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  ol.schema {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ol.schema li {
+    margin: 0 0 4px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .indice {
+    display: block;
+    color: #3a4654;
+    font-size: 10pt;
+    line-height: 1.3;
+    margin: 0 0 0 8mm;
+  }
+
+  .situation { margin: 0 0 5px; }
+  .situation .texte { line-height: 1.4; }
+  .suite { color: #243444; font-size: 10.5pt; }
+
+  h3 {
+    font-size: 12.5pt;
+    color: #0f6b45;
+    margin: 0 0 6px;
+    break-after: avoid;
+  }
+
+  .memo {
+    margin-top: 12px;
+    border-top: 2px solid #0f6b45;
+    padding-top: 6px;
+  }
+
+  .memo table,
+  .echelle,
+  .memo h3 {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .memo p { margin: 0 0 6px; }
+
+  table.memo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2px 0 8px;
+    font-size: 10.5pt;
+  }
+
+  table.memo th {
+    background: #0f6b45;
+    color: white;
+    text-align: left;
+    padding: 4px 6px;
+  }
+
+  table.memo td {
+    border: 1px solid #c5d6cc;
+    padding: 3px 6px;
+    vertical-align: top;
+  }
+
+  table.memo tr:nth-child(even) td { background: #f3faf6; }
+
+  ol.cycle {
+    margin: 2px 0 8px;
+    padding-left: 22px;
+  }
+
+  ol.cycle li { margin: 1px 0; }
+
+  .def { margin: 2px 0 4px; }
+
+  .echelle {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .palier {
+    flex: 1;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 10pt;
+    line-height: 1.3;
+  }
+
+  .palier strong { display: block; font-size: 10.5pt; }
+
+  .a { background: #d9f2e3; }
+  .b { background: #fff4d6; }
+  .c { background: #fde8e4; }
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <p class="kicker">Physique-Chimie · Cycle 4 · Cinquième · À sortir après l’essai</p>
+  <h1>Corrigé — Les états de la matière</h1>
+  <p class="chap">Chapitre 1 — La matière dans tous ses états · Activité 2</p>
+  <div class="etiquettes">
+    <span class="badge">Corrigé</span>
+    <span class="badge second">Même numérotation que la fiche d’exercices</span>
+  </div>
+</header>
+
+<div class="consigne">
+  <strong>Comment corriger.</strong> Chaque trou juste vaut 1 point. Le vocabulaire est celui du cours : solidification, fusion, vaporisation (évaporation ou ébullition), liquéfaction, condensation (ou condensation solide), sublimation. Quand une autre formulation reste juste, elle est indiquée sous l’exercice. L’orthographe des mots du cours compte.
+</div>
+
+<section class="exo">
+  <h2>Exercice 1 — Les trois états <span class="pts">/ 5</span></h2>
+  <p>La matière peut exister sous trois états physiques : l’état <span class="rep">solide</span>, l’état <span class="rep">liquide</span> et l’état <span class="rep">gaz</span>.</p>
+  <p>Le passage d’un état physique à un autre constitue une <span class="rep">transformation physique</span>.</p>
+  <p>Il existe <span class="rep">6</span> changements d’état.</p>
+  <div class="note"><strong>Aussi accepté.</strong> Les trois états dans n’importe quel ordre. « Gazeux » à la place de « gaz ». « Changement d’état » à la place de « transformation physique ». « Six » à la place de « 6 ».</div>
+</section>
+
+<section class="exo">
+  <h2>Exercice 2 — Les six changements d’état <span class="pts">/ 6</span></h2>
+  <table class="changements">
+    <thead>
+      <tr>
+        <th style="width:24%">État de départ</th>
+        <th style="width:24%">État d’arrivée</th>
+        <th>Nom du changement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>liquide</td><td>solide</td><td><span class="rep">solidification</span></td></tr>
+      <tr><td>solide</td><td>liquide</td><td><span class="rep">fusion</span></td></tr>
+      <tr><td>liquide</td><td>gaz</td><td><span class="rep">vaporisation</span></td></tr>
+      <tr><td>gaz</td><td>liquide</td><td><span class="rep">liquéfaction</span></td></tr>
+      <tr><td>gaz</td><td>solide</td><td><span class="rep">condensation</span></td></tr>
+      <tr><td>solide</td><td>gaz</td><td><span class="rep">sublimation</span></td></tr>
+    </tbody>
+  </table>
+  <div class="note"><strong>Aussi accepté.</strong> Pour gaz → solide : « condensation solide ». Les deux noms sont dans le cours.</div>
+</section>
+
+<section class="exo">
+  <h2>Exercice 3 — Être précis <span class="pts">/ 8</span></h2>
+  <p class="item"><span class="n">1.</span> Le passage de l’état liquide à l’état gaz s’appelle la <span class="rep">vaporisation</span>. Il peut se faire par <span class="rep">évaporation</span> ou par <span class="rep">ébullition</span>.</p>
+  <p class="item"><span class="n">2.</span> Quand l’eau passe à l’état gaz seulement à sa surface, sans bouillir, ce passage s’appelle : <span class="rep">évaporation</span>. Il a lieu au niveau de la <span class="rep">surface libre</span> du liquide.</p>
+  <p class="item"><span class="n">3.</span> Quand le liquide bout, ce passage s’appelle : <span class="rep">ébullition</span>.</p>
+  <p class="item"><span class="n">4.</span> Le passage direct de l’état gaz à l’état solide s’appelle la <span class="rep">condensation</span>, ou <span class="rep">condensation solide</span>.</p>
+  <div class="note"><strong>Aussi accepté.</strong> Dans la phrase 1, « évaporation » et « ébullition » peuvent être inversés. Les deux mots sont attendus. « Surface libre » compte pour un seul point : les deux mots sont nécessaires.</div>
+</section>
+
+<section class="exo">
+  <h2>Exercice 4 — Le vocabulaire du cours <span class="pts">/ 7</span></h2>
+  <p class="item"><span class="n">1.</span> Changement d’état : passage d’un <span class="rep">état physique</span> à un autre.</p>
+  <p class="item"><span class="n">2.</span> Cycle de l’eau : ensemble des <span class="rep">changements</span> d’état subis par l’eau, depuis son <span class="rep">évaporation</span> des océans jusqu’à son <span class="rep">retour</span> dans les océans.</p>
+  <p class="item"><span class="n">3.</span> Évaporation : passage de l’état <span class="rep">liquide</span> à l’état <span class="rep">gazeux</span> au niveau de la <span class="rep">surface libre</span> du liquide.</p>
+  <div class="note"><strong>Aussi accepté.</strong> « Gaz » à la place de « gazeux ». Le mot du cadre Vocabulaire est « gazeux ». « Vaporisation » est proche de « évaporation », mais le mot exact de cette définition est « évaporation ».</div>
+</section>
+
+<section class="exo">
+  <h2>Exercice 5 — Le cycle de l’eau <span class="pts">/ 21</span></h2>
+  <p class="etape"><span class="pastille">1</span> Sous l’action du <span class="rep">Soleil</span>, une partie de l’eau des <span class="rep">océans</span>, des cours d’eau et de la surface du sol se transforme en <span class="rep">vapeur</span> d’eau. Cette vapeur, invisible, monte dans l’<span class="rep">atmosphère</span>.</p>
+  <p class="etape"><span class="pastille">2</span> Plus haut, l’air est plus <span class="rep">froid</span>. La vapeur d’eau se transforme en minuscules <span class="rep">gouttes</span> d’eau en suspension : elles forment les <span class="rep">nuages</span>.</p>
+  <p class="etape"><span class="pastille">3</span> L’eau quitte ensuite les nuages et retombe sur le sol ou dans l’océan. On appelle ces retombées des <span class="rep">précipitations</span>. En haute altitude, les nuages de pluie peuvent devenir des nuages de <span class="rep">neige</span> ou de <span class="rep">glace</span>. Il peut aussi tomber des grains de glace : c’est de la <span class="rep">grêle</span>.</p>
+  <p class="etape"><span class="pastille">4</span> Sur les continents, l’eau des précipitations peut s’<span class="rep">infiltrer</span> dans le sol et le sous-sol. Elle forme alors des nappes d’eau <span class="rep">souterraine</span>. Elle peut aussi <span class="rep">ruisseler</span> en surface et former des <span class="rep">rivières</span> et des <span class="rep">fleuves</span>.</p>
+  <p class="etape"><span class="pastille">5</span> Au printemps, les <span class="rep">températures</span> augmentent. La neige qui est au sol <span class="rep">fond</span> et se transforme en eau <span class="rep">liquide</span>.</p>
+  <p class="etape"><span class="pastille">6</span> Les eaux souterraines et les eaux de <span class="rep">ruissellement</span> finissent par retourner dans les <span class="rep">océans</span>.</p>
+  <div class="note"><strong>Aussi accepté.</strong> « Neige » et « glace » dans n’importe quel ordre. « Rivières » et « fleuves » dans n’importe quel ordre. Un mot juste placé au mauvais endroit ne compte pas deux fois.</div>
+</section>
+
+<section class="exo">
+  <h2>Exercice 6 — Les six étapes du schéma <span class="pts">/ 6</span></h2>
+  <ol class="schema">
+    <li>
+      <span class="pastille">1</span> <span class="rep">Évaporation</span>
+      <span class="indice">L’eau liquide des océans, des cours d’eau et du sol devient de la vapeur.</span>
+    </li>
+    <li>
+      <span class="pastille">2</span> <span class="rep">Formation de nuages</span>
+      <span class="indice">La vapeur forme des gouttes en suspension.</span>
+    </li>
+    <li>
+      <span class="pastille">3</span> <span class="rep">Précipitations</span>
+      <span class="indice">L’eau retombe : pluie, neige ou grêle.</span>
+    </li>
+    <li>
+      <span class="pastille">4</span> <span class="rep">Fonte des glaciers</span>
+      <span class="indice">La neige et la glace des glaciers redeviennent liquides.</span>
+    </li>
+    <li>
+      <span class="pastille">5</span> <span class="rep">Ruissellement et infiltration</span>
+      <span class="indice">L’eau s’enfonce dans le sol ou coule à la surface.</span>
+    </li>
+    <li>
+      <span class="pastille">6</span> <span class="rep">Retour aux océans</span>
+      <span class="indice">L’eau quitte les continents et revient dans les océans.</span>
+    </li>
+  </ol>
+  <div class="note"><strong>Aussi accepté.</strong> Étape 1 : « vaporisation » décrit le phénomène ; le mot écrit sur le schéma est « Évaporation ». Étape 5 : « infiltration et ruissellement » est accepté. Étape 4 : « fusion » est le changement d’état, le nom de l’étape sur le schéma est « Fonte des glaciers ».</div>
+</section>
+
+<section class="exo">
+  <h2>Exercice 7 — Dans la vie de tous les jours <span class="pts">/ 7</span></h2>
+  <p class="situation"><span class="texte"><strong>1.</strong> Un glaçon fond dans un verre d’eau. <span class="rep">fusion</span> <span class="suite">solide → liquide</span></span></p>
+  <p class="situation"><span class="texte"><strong>2.</strong> Une flaque sèche au soleil, sans jamais bouillir. <span class="rep">évaporation</span> <span class="suite">liquide → gaz, à la surface</span></span></p>
+  <p class="situation"><span class="texte"><strong>3.</strong> L’eau d’une casserole bout et se transforme en vapeur. <span class="rep">ébullition</span> <span class="suite">liquide → gaz, en bouillant</span></span></p>
+  <p class="situation"><span class="texte"><strong>4.</strong> La vapeur d’eau chaude redevient des gouttes sur une vitre froide. <span class="rep">liquéfaction</span> <span class="suite">gaz → liquide</span></span></p>
+  <p class="situation"><span class="texte"><strong>5.</strong> Pendant la nuit, l’eau d’une flaque devient de la glace. <span class="rep">solidification</span> <span class="suite">liquide → solide</span></span></p>
+  <p class="situation"><span class="texte"><strong>6.</strong> La vapeur d’eau de l’air se transforme directement en givre, donc en glace. <span class="rep">condensation solide</span> <span class="suite">gaz → solide</span></span></p>
+  <p class="situation"><span class="texte"><strong>7.</strong> De la neige passe directement à l’état de vapeur, sans devenir liquide. <span class="rep">sublimation</span> <span class="suite">solide → gaz</span></span></p>
+  <div class="note">
+    <strong>Aussi accepté.</strong>
+    2 : « vaporisation » (le mot le plus précis est « évaporation »).
+    3 : « vaporisation » (le mot le plus précis est « ébullition »).
+    6 : « condensation » (le mot le plus précis est « condensation solide »).
+    Le mot précis et le mot juste mais plus général valent le point.
+  </div>
+</section>
+
+<section class="memo">
+  <h3>Mémo pour revoir le cours après la correction</h3>
+  <p>La matière existe sous trois états : <span class="rep">solide</span>, <span class="rep">liquide</span> et <span class="rep">gaz</span>. Le passage de l’un à l’autre est une transformation physique. Il en existe six.</p>
+
+  <table class="memo">
+    <thead>
+      <tr>
+        <th>On part de</th>
+        <th>On arrive à</th>
+        <th>Nom</th>
+        <th>Exemple</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>liquide</td>
+        <td>solide</td>
+        <td>solidification</td>
+        <td>l’eau d’une flaque qui gèle</td>
+      </tr>
+      <tr>
+        <td>solide</td>
+        <td>liquide</td>
+        <td>fusion</td>
+        <td>un glaçon qui fond</td>
+      </tr>
+      <tr>
+        <td>liquide</td>
+        <td>gaz</td>
+        <td>vaporisation</td>
+        <td>évaporation : une flaque qui sèche au soleil<br>ébullition : l’eau qui bout</td>
+      </tr>
+      <tr>
+        <td>gaz</td>
+        <td>liquide</td>
+        <td>liquéfaction</td>
+        <td>la buée sur une vitre froide</td>
+      </tr>
+      <tr>
+        <td>gaz</td>
+        <td>solide</td>
+        <td>condensation<br>(condensation solide)</td>
+        <td>le givre</td>
+      </tr>
+      <tr>
+        <td>solide</td>
+        <td>gaz</td>
+        <td>sublimation</td>
+        <td>la neige qui devient vapeur sans fondre</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Deux points à bien distinguer.</strong></p>
+  <p class="def">La solidification part d’un liquide qui devient solide. La condensation solide part d’un gaz qui devient solide.</p>
+  <p class="def">L’évaporation a lieu à la surface libre du liquide, sans bouillir. L’ébullition a lieu quand le liquide bout. Les deux sont des vaporisations.</p>
+
+  <p><strong>Les six étapes du schéma (doc. 2).</strong></p>
+  <ol class="cycle">
+    <li><strong>Évaporation</strong> — le Soleil transforme une partie de l’eau en vapeur.</li>
+    <li><strong>Formation de nuages</strong> — en altitude, la vapeur devient de minuscules gouttes.</li>
+    <li><strong>Précipitations</strong> — pluie, neige ou grêle. En haute altitude : neige ou glace.</li>
+    <li><strong>Fonte des glaciers</strong> — au printemps, la neige redevient liquide.</li>
+    <li><strong>Ruissellement et infiltration</strong> — nappes souterraines, rivières et fleuves.</li>
+    <li><strong>Retour aux océans</strong> — les eaux souterraines et de ruissellement reviennent aux océans.</li>
+  </ol>
+
+  <p class="def"><strong>Repères.</strong> De 50 à 60 : revoir seulement les mots manqués. De 35 à 49 : refaire les exercices 2, 3 et 7 demain, sans la banque. En dessous de 35 : reprendre le doc. 1 et le doc. 2 à voix haute, puis refaire ces trois exercices.</p>
+</section>
+
+</body>
+</html>
