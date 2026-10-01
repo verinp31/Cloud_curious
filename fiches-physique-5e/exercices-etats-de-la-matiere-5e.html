@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Exercices — Les états de la matière — 5e</title>
+<style>
+  @page {
+    size: A4;
+    margin: 13mm 13mm 16mm 13mm;
+    @top-left {
+      content: "Physique-Chimie — 5e — Activité 2 — Exercices";
+      font-family: "Liberation Sans", sans-serif;
+      font-size: 9pt;
+      color: #4a5b6c;
+    }
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-family: "Liberation Sans", sans-serif;
+      font-size: 9pt;
+      color: #4a5b6c;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #1c2833;
+    font-family: "Liberation Sans", "Nimbus Sans", sans-serif;
+    font-size: 12pt;
+    line-height: 1.45;
+  }
+
+  header.bandeau {
+    background: #163a5f;
+    color: white;
+    border-radius: 8px;
+    padding: 11px 16px 12px;
+    margin-bottom: 8px;
+  }
+
+  .kicker {
+    font-size: 9pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin: 0 0 3px;
+  }
+
+  h1 {
+    font-size: 16.5pt;
+    line-height: 1.2;
+    margin: 0 0 3px;
+    font-weight: 700;
+  }
+
+  .chap {
+    margin: 0;
+    font-size: 10.5pt;
+    opacity: 0.95;
+  }
+
+  .etiquettes {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #f3c15a;
+    color: #1c2833;
+    font-weight: 700;
+    font-size: 10pt;
+    border-radius: 999px;
+    padding: 2px 10px;
+  }
+
+  .badge.second {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.7);
+    font-weight: 400;
+  }
+
+  .identite {
+    display: flex;
+    gap: 14px;
+    margin: 8px 0 6px;
+    font-size: 11.5pt;
+  }
+
+  .champ {
+    flex: 1;
+    border-bottom: 1.25px solid #163a5f;
+    min-height: 1.15em;
+  }
+
+  .champ.court { flex: 0.6; }
+
+  .consigne {
+    background: #eef4fa;
+    border: 1px solid #c5d6e6;
+    border-radius: 6px;
+    padding: 7px 12px 8px;
+    margin: 0 0 4px;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .consigne strong { color: #163a5f; }
+
+  .consigne ul {
+    margin: 3px 0 0;
+    padding-left: 18px;
+  }
+
+  .consigne li { margin: 1px 0; }
+
+  h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 13pt;
+    color: #163a5f;
+    margin: 0 0 6px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h2 .pts {
+    margin-left: auto;
+    font-size: 11pt;
+    font-weight: 700;
+    color: #163a5f;
+    background: #e7f0f8;
+    border-radius: 999px;
+    padding: 1px 8px;
+    white-space: nowrap;
+  }
+
+  .exo {
+    border-left: 4px solid #163a5f;
+    padding: 2px 0 2px 12px;
+    margin: 11px 0 0;
+  }
+
+  .exo p { margin: 0 0 8px; }
+
+  .enonce {
+    line-height: 2.05;
+    margin-bottom: 4px;
+  }
+
+  .trou {
+    display: inline-block;
+    border-bottom: 1.6px solid #1c2833;
+    min-width: 36mm;
+    height: 1.05em;
+    vertical-align: text-bottom;
+    margin: 0 2px;
+  }
+
+  .trou.s { min-width: 18mm; }
+  .trou.m { min-width: 42mm; }
+  .trou.l { min-width: 58mm; }
+  .trou.xl { min-width: 78mm; }
+
+  .rappel {
+    font-size: 10.5pt;
+    color: #243444;
+    margin: 0 0 6px;
+  }
+
+  .banque {
+    background: #fff8ec;
+    border: 1px solid #e2c48a;
+    border-radius: 6px;
+    padding: 6px 10px 7px;
+    margin: 0 0 8px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .banque .titre {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #6a4b12;
+    margin: 0 0 3px;
+  }
+
+  .mot {
+    display: inline-block;
+    background: white;
+    border: 1px solid #d7b56a;
+    border-radius: 999px;
+    padding: 1px 9px;
+    margin: 2px 4px 2px 0;
+    font-weight: 700;
+    color: #5c3e0c;
+    font-size: 11pt;
+  }
+
+  table.changements {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2px 0 6px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  table.changements th {
+    background: #163a5f;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    padding: 5px 8px;
+    font-size: 10.5pt;
+  }
+
+  table.changements td {
+    border: 1px solid #c5d0db;
+    padding: 7px 8px;
+    height: 11mm;
+    vertical-align: middle;
+    font-size: 11.5pt;
+  }
+
+  table.changements tr:nth-child(even) td { background-color: #f4f8fb; }
+
+  table.changements td.reponse {
+    min-width: 58mm;
+    background-image: linear-gradient(#1c2833, #1c2833);
+    background-size: calc(100% - 16px) 1.5px;
+    background-position: left 8px bottom 3.5px;
+    background-repeat: no-repeat;
+  }
+
+  table.changements tr:nth-child(even) td.reponse {
+    background-color: #f4f8fb;
+    background-image: linear-gradient(#1c2833, #1c2833);
+    background-size: calc(100% - 16px) 1.5px;
+    background-position: left 8px bottom 3.5px;
+    background-repeat: no-repeat;
+  }
+
+  .item {
+    margin: 0 0 8px;
+    line-height: 2.05;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .item .n {
+    font-weight: 700;
+    color: #163a5f;
+  }
+
+  .etape {
+    margin: 0 0 8px;
+    line-height: 2.05;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .pastille {
+    display: inline-block;
+    width: 5.6mm;
+    height: 5.6mm;
+    line-height: 5.6mm;
+    text-align: center;
+    border-radius: 50%;
+    background: #163a5f;
+    color: white;
+    font-size: 9.5pt;
+    font-weight: 700;
+    margin-right: 4px;
+    vertical-align: 1px;
+  }
+
+  ol.schema {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ol.schema li {
+    margin: 0 0 8px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .indice {
+    color: #243444;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+
+  .ligne {
+    display: block;
+    width: 100%;
+    border-bottom: 1.6px solid #1c2833;
+    height: 7.5mm;
+    margin: 1px 0 3px;
+  }
+
+  .situation {
+    margin: 0 0 7px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .situation .texte { line-height: 1.35; }
+
+  .bilan {
+    margin-top: 12px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  table.notes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+  }
+
+  table.notes th, table.notes td {
+    border: 1px solid #c5d0db;
+    text-align: center;
+    padding: 4px 3px;
+    font-size: 10.5pt;
+  }
+
+  table.notes th {
+    background: #163a5f;
+    color: white;
+    font-weight: 700;
+  }
+
+  table.notes td { height: 8mm; }
+
+  .checks {
+    margin-top: 8px;
+    background: #f7f5f2;
+    border-radius: 6px;
+    padding: 8px 12px;
+  }
+
+  .checks p { margin: 0 0 4px; font-weight: 700; color: #163a5f; }
+
+  .check {
+    display: block;
+    margin: 3px 0;
+    font-size: 11pt;
+  }
+
+  .case {
+    display: inline-block;
+    width: 4.2mm;
+    height: 4.2mm;
+    border: 1.6px solid #163a5f;
+    margin-right: 6px;
+    vertical-align: -0.4mm;
+    background: white;
+  }
+
+  .suite {
+    font-size: 10pt;
+    color: #4a5b6c;
+    font-style: italic;
+    margin: 2px 0 0;
+  }
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <p class="kicker">Physique-Chimie · Cycle 4 · Cinquième</p>
+  <h1>Les états de la matière et leurs transformations physiques</h1>
+  <p class="chap">Chapitre 1 — La matière dans tous ses états · Activité 2</p>
+  <div class="etiquettes">
+    <span class="badge">Je vérifie mes connaissances</span>
+    <span class="badge second">Doc. 1 définitions · Doc. 2 cycle de l’eau</span>
+  </div>
+</header>
+
+<div class="identite">
+  <span>Prénom</span><span class="champ"></span>
+  <span>Nom</span><span class="champ"></span>
+  <span>Classe</span><span class="champ court"></span>
+  <span>Date</span><span class="champ court"></span>
+</div>
+
+<div class="consigne">
+  <strong>Consigne.</strong> Complète les trous. C’est un entraînement : essaie d’abord, puis vérifie avec ta leçon.
+  <ul>
+    <li>Aux exercices 2 et 5, une banque de mots t’aide. Chaque mot sert une seule fois, sauf quand c’est indiqué.</li>
+    <li>Certains trous attendent deux mots. Le trait est alors plus long.</li>
+    <li>Un trou juste vaut 1 point. Total : 60 points.</li>
+  </ul>
+</div>
+
+<section class="exo">
+  <h2>Exercice 1 — Les trois états <span class="pts">/ 5</span></h2>
+  <p class="enonce">La matière peut exister sous trois états physiques : l’état <span class="trou m">&nbsp;</span>, l’état <span class="trou m">&nbsp;</span> et l’état <span class="trou m">&nbsp;</span>.</p>
+  <p class="enonce" style="margin-bottom:2px">Le passage d’un état physique à un autre constitue une :</p>
+  <span class="ligne"></span>
+  <p class="enonce">Il existe <span class="trou s">&nbsp;</span> changements d’état.</p>
+</section>
+
+<section class="exo">
+  <h2>Exercice 2 — Les six changements d’état <span class="pts">/ 6</span></h2>
+  <p class="rappel">Écris le nom du changement, sans « la ». Chaque mot de la banque sert une seule fois.</p>
+  <div class="banque">
+    <p class="titre">Banque de mots</p>
+    <span class="mot">condensation</span>
+    <span class="mot">fusion</span>
+    <span class="mot">liquéfaction</span>
+    <span class="mot">solidification</span>
+    <span class="mot">sublimation</span>
+    <span class="mot">vaporisation</span>
+  </div>
+  <table class="changements">
+    <thead>
+      <tr>
+        <th style="width:27%">État de départ</th>
+        <th style="width:27%">État d’arrivée</th>
+        <th>Nom du changement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>liquide</td><td>solide</td><td class="reponse"></td></tr>
+      <tr><td>solide</td><td>liquide</td><td class="reponse"></td></tr>
+      <tr><td>liquide</td><td>gaz</td><td class="reponse"></td></tr>
+      <tr><td>gaz</td><td>liquide</td><td class="reponse"></td></tr>
+      <tr><td>gaz</td><td>solide</td><td class="reponse"></td></tr>
+      <tr><td>solide</td><td>gaz</td><td class="reponse"></td></tr>
+    </tbody>
+  </table>
+  <p class="rappel">Pour le passage du gaz vers le solide, écris le nom le plus court. Le nom complet est demandé à l’exercice 3.</p>
+</section>
+
+<section class="exo">
+  <h2>Exercice 3 — Être précis <span class="pts">/ 8</span></h2>
+  <p class="item"><span class="n">1.</span> Le passage de l’état liquide à l’état gaz s’appelle la <span class="trou l">&nbsp;</span>. Il peut se faire par <span class="trou l">&nbsp;</span> ou par <span class="trou l">&nbsp;</span>.</p>
+  <p class="item"><span class="n">2.</span> Quand l’eau passe à l’état gaz seulement à sa surface, sans bouillir, ce passage s’appelle : <span class="trou l">&nbsp;</span>. Il a lieu au niveau de la <span class="trou xl">&nbsp;</span> du liquide.</p>
+  <p class="item"><span class="n">3.</span> Quand le liquide bout, ce passage s’appelle : <span class="trou l">&nbsp;</span>.</p>
+  <p class="item"><span class="n">4.</span> Le passage direct de l’état gaz à l’état solide s’appelle la <span class="trou l">&nbsp;</span>, ou <span class="trou xl">&nbsp;</span>.</p>
+</section>
+
+<section class="exo">
+  <h2>Exercice 4 — Le vocabulaire du cours <span class="pts">/ 7</span></h2>
+  <p class="rappel">Complète les trois définitions du cadre « Vocabulaire ».</p>
+  <p class="item"><span class="n">1.</span> Changement d’état : passage d’un <span class="trou xl">&nbsp;</span> à un autre.</p>
+  <p class="item"><span class="n">2.</span> Cycle de l’eau : ensemble des <span class="trou l">&nbsp;</span> d’état subis par l’eau, depuis son <span class="trou l">&nbsp;</span> des océans jusqu’à son <span class="trou m">&nbsp;</span> dans les océans.</p>
+  <p class="item"><span class="n">3.</span> Évaporation : passage de l’état <span class="trou m">&nbsp;</span> à l’état <span class="trou m">&nbsp;</span> au niveau de la <span class="trou xl">&nbsp;</span> du liquide.</p>
+</section>
+
+<section class="exo">
+  <h2>Exercice 5 — Le cycle de l’eau <span class="pts">/ 21</span></h2>
+  <p class="rappel">Complète le récit. Chaque mot sert une seule fois. Le mot « océans » sert deux fois. Les verbes sont déjà à la bonne forme.</p>
+  <div class="banque">
+    <p class="titre">Banque de mots</p>
+    <span class="mot">atmosphère</span>
+    <span class="mot">froid</span>
+    <span class="mot">fleuves</span>
+    <span class="mot">fond</span>
+    <span class="mot">glace</span>
+    <span class="mot">gouttes</span>
+    <span class="mot">grêle</span>
+    <span class="mot">infiltrer</span>
+    <span class="mot">liquide</span>
+    <span class="mot">neige</span>
+    <span class="mot">nuages</span>
+    <span class="mot">océans</span>
+    <span class="mot">océans</span>
+    <span class="mot">précipitations</span>
+    <span class="mot">rivières</span>
+    <span class="mot">ruisseler</span>
+    <span class="mot">ruissellement</span>
+    <span class="mot">Soleil</span>
+    <span class="mot">souterraine</span>
+    <span class="mot">températures</span>
+    <span class="mot">vapeur</span>
+  </div>
+
+  <p class="etape"><span class="pastille">1</span> Sous l’action du <span class="trou m">&nbsp;</span>, une partie de l’eau des <span class="trou m">&nbsp;</span>, des cours d’eau et de la surface du sol se transforme en <span class="trou m">&nbsp;</span> d’eau. Cette vapeur, invisible, monte dans l’<span class="trou l">&nbsp;</span>.</p>
+
+  <p class="etape"><span class="pastille">2</span> Plus haut, l’air est plus <span class="trou m">&nbsp;</span>. La vapeur d’eau se transforme en minuscules <span class="trou m">&nbsp;</span> d’eau en suspension : elles forment les <span class="trou m">&nbsp;</span>.</p>
+
+  <p class="etape"><span class="pastille">3</span> L’eau quitte ensuite les nuages et retombe sur le sol ou dans l’océan. On appelle ces retombées des <span class="trou l">&nbsp;</span>. En haute altitude, les nuages de pluie peuvent devenir des nuages de <span class="trou m">&nbsp;</span> ou de <span class="trou m">&nbsp;</span>. Il peut aussi tomber des grains de glace : c’est de la <span class="trou m">&nbsp;</span>.</p>
+
+  <p class="etape"><span class="pastille">4</span> Sur les continents, l’eau des précipitations peut <span style="white-space:nowrap">s’<span class="trou l">&nbsp;</span></span> dans le sol et le sous-sol. Elle forme alors des nappes d’eau <span class="trou l">&nbsp;</span>. Elle peut aussi <span class="trou l">&nbsp;</span> en surface et former des <span class="trou m">&nbsp;</span> et des <span class="trou m">&nbsp;</span>.</p>
+
+  <p class="etape"><span class="pastille">5</span> Au printemps, les <span class="trou l">&nbsp;</span> augmentent. La neige qui est au sol <span class="trou s">&nbsp;</span> et se transforme en eau <span class="trou m">&nbsp;</span>.</p>
+
+  <p class="etape"><span class="pastille">6</span> Les eaux souterraines et les eaux de <span class="trou l">&nbsp;</span> finissent par retourner dans les <span class="trou m">&nbsp;</span>.</p>
+</section>
+
+<section class="exo">
+  <h2>Exercice 6 — Les six étapes du schéma <span class="pts">/ 6</span></h2>
+  <p class="rappel">Dans le doc. 2, six numéros décrivent le cycle. Sous chaque indice, écris le nom de l’étape tel qu’il est écrit sur le schéma.</p>
+  <ol class="schema">
+    <li>
+      <span class="pastille">1</span>
+      <span class="indice">L’eau liquide des océans, des cours d’eau et du sol devient de la vapeur.</span>
+      <span class="ligne"></span>
+    </li>
+    <li>
+      <span class="pastille">2</span>
+      <span class="indice">La vapeur forme des gouttes en suspension.</span>
+      <span class="ligne"></span>
+    </li>
+    <li>
+      <span class="pastille">3</span>
+      <span class="indice">L’eau retombe : pluie, neige ou grêle.</span>
+      <span class="ligne"></span>
+    </li>
+    <li>
+      <span class="pastille">4</span>
+      <span class="indice">La neige et la glace des glaciers redeviennent liquides.</span>
+      <span class="ligne"></span>
+    </li>
+    <li>
+      <span class="pastille">5</span>
+      <span class="indice">L’eau s’enfonce dans le sol ou coule à la surface.</span>
+      <span class="ligne"></span>
+    </li>
+    <li>
+      <span class="pastille">6</span>
+      <span class="indice">L’eau quitte les continents et revient dans les océans.</span>
+      <span class="ligne"></span>
+    </li>
+  </ol>
+</section>
+
+<section class="exo">
+  <h2>Exercice 7 — Dans la vie de tous les jours <span class="pts">/ 7</span></h2>
+  <p class="rappel">Écris le nom du changement d’état. Cache la banque de l’exercice 2 et essaie de mémoire. Choisis le mot le plus précis.</p>
+  <div class="situation">
+    <div class="texte"><strong>1.</strong> Un glaçon fond dans un verre d’eau.</div>
+    <span class="ligne"></span>
+  </div>
+  <div class="situation">
+    <div class="texte"><strong>2.</strong> Une flaque sèche au soleil, sans jamais bouillir.</div>
+    <span class="ligne"></span>
+  </div>
+  <div class="situation">
+    <div class="texte"><strong>3.</strong> L’eau d’une casserole bout et se transforme en vapeur.</div>
+    <span class="ligne"></span>
+  </div>
+  <div class="situation">
+    <div class="texte"><strong>4.</strong> La vapeur d’eau chaude redevient des gouttes sur une vitre froide.</div>
+    <span class="ligne"></span>
+  </div>
+  <div class="situation">
+    <div class="texte"><strong>5.</strong> Pendant la nuit, l’eau d’une flaque devient de la glace.</div>
+    <span class="ligne"></span>
+  </div>
+  <div class="situation">
+    <div class="texte"><strong>6.</strong> La vapeur d’eau de l’air se transforme directement en givre, donc en glace.</div>
+    <span class="ligne"></span>
+  </div>
+  <div class="situation">
+    <div class="texte"><strong>7.</strong> De la neige passe directement à l’état de vapeur, sans devenir liquide.</div>
+    <span class="ligne"></span>
+  </div>
+</section>
+
+<section class="bilan">
+  <h2>Mon résultat <span class="pts">/ 60</span></h2>
+  <table class="notes">
+    <thead>
+      <tr>
+        <th>Exercice</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Barème</th>
+        <td>/ 5</td>
+        <td>/ 6</td>
+        <td>/ 8</td>
+        <td>/ 7</td>
+        <td>/ 21</td>
+        <td>/ 6</td>
+        <td>/ 7</td>
+        <td>/ 60</td>
+      </tr>
+      <tr>
+        <th>Points</th>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="checks">
+    <p>Après la correction, je coche ce que je sais expliquer.</p>
+    <span class="check"><span class="case"></span>Je connais les six noms des changements d’état.</span>
+    <span class="check"><span class="case"></span>Je sais expliquer la différence entre évaporation et ébullition.</span>
+    <span class="check"><span class="case"></span>Je sais raconter le cycle de l’eau dans l’ordre du schéma.</span>
+  </div>
+  <p class="suite">Le corrigé est dans un autre document. Regarde-le après avoir terminé, puis corrige avec une autre couleur.</p>
+</section>
+
+</body>
+</html>
